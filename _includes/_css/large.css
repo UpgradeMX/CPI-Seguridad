@@ -1,0 +1,71 @@
+/* - - - - - - - - - - - - - - - 
+CSS principal
+Desarrollado por: Upgrade Diseño Interactivo
+Para: 
+Fecha: 
+Ultima modificación por: Natsumi Franco
+Fecha: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
+
+/* ====== F O N T S ====== */
+@font-face {
+    font-family: 'muller_bold';
+    src: url('../../_fonts/muller_bold-webfont.eot');
+    src: url('../../_fonts/muller_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../_fonts/muller_bold-webfont.woff') format('woff'),
+         url('../../_fonts/muller_bold-webfont.ttf') format('truetype'),
+         url('../../_fonts/muller_bold-webfont.svg#muller_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ====== F O N T S (end) ====== */
+
+/*Eliminamos márgenes del "body" */
+html, body{ margin:0px; padding:0px; height:100%; }
+
+#big-container /* Div que va a manterner el "footer" siempre al fondo */
+{
+	height: 100% !important;
+    min-height:100% !important;
+	
+}
+
+/* GENERAL */
+
+a { text-decoration: none; }
+
+/* HEADER */
+
+#logo {
+ 		width: 150px;
+	}
+
+#menu_header {
+		box-sizing: border-box;
+		padding: 30px 50px;
+		text-align: right;
+		margin: 0px;
+	}
+	#menu_header menuitem {
+			border-bottom: transparent 3px solid;
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			-o-transition: all .5s ease;
+			transition: all .5s ease;
+			padding: 0px 10px 20px;	
+		}
+		#menu_header menuitem a { color: #000000; }
+		#menu_header menuitem:hover { border-bottom-color: #9e8137; }
+			#menu_header menuitem:hover a { color: #9e8137; }
+
+/* FOOTER */
+
+#footer_cut { padding-top:40px; clear:both; }
+
+footer { 
+		background-color:#9f8137;
+		margin-top: -50px;  
+		height: 50px; 
+	}
