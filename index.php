@@ -14,7 +14,7 @@
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
              
-           
+           <p>Prueba de master</p>
         	<div id="footer_cut"></div>
         </div><!--END #big-container -->
         
