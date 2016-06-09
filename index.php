@@ -14,7 +14,7 @@
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
              
-           <p>prueba jorge</p>
+           <p>prueba nat</p>
         	<div id="footer_cut"></div>
         </div><!--END #big-container -->
         
