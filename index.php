@@ -14,7 +14,15 @@
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
              
+<<<<<<< HEAD
            <p>prueba nat-master</p>
+=======
+<<<<<<< HEAD
+           <p>Prueba de master</p>
+=======
+           <p>prueba nat</p>
+>>>>>>> origin/master
+>>>>>>> master
         	<div id="footer_cut"></div>
         </div><!--END #big-container -->
         
