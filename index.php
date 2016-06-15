@@ -13,7 +13,6 @@
     <?php include_once("phpAssets/analytics.php"); ?>
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
-<<<<<<< Updated upstream
 				<main id="index">
                 	<div id="welcome">
                     <p>Contamos con la experiencia de <br>
@@ -51,10 +50,7 @@
                     </div>
                 
                 </main>
-=======
-             
 
->>>>>>> Stashed changes
         	<div id="footer_cut"></div>
         </div><!--END #big-container -->
         
