@@ -1,0 +1,18 @@
+Options -Indexes
+
+RewriteEngine on
+#Cambiar a dominio oficial
+ErrorDocument 404 localhost/CPI-seguridad/
+
+# URL AMIGABLES
+Options     +FollowSymLinks 
+RewriteEngine on
+# RewriteBase     /
+# CONDICIONES
+#RewriteCond     %{REQUEST_FILENAME}     !-f
+#RewriteCond     %{REQUEST_FILENAME}     !-d
+# REGLAS
+	#Rewriterule ^categoria/(.+) categorias.php?tipo=$1
+	Rewriterule ^inicio index.php
+	Rewriterule ^nosotros nosotros.php
+	

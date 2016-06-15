@@ -27,3 +27,8 @@
 <script type="text/javascript" src="_includes/_js/main.js"></script>
 <!-- SPRY -->
 <script type="text/javascript" src="_includes/_js/spry/SpryValidationTextField.js"></script>
+
+<!-- plugins -->
+<script type="text/javascript" src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
+<script type="text/javascript" src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
+<script type="text/javascript" src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
