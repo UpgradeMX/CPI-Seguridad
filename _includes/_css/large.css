@@ -9,6 +9,27 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
 
 /* ====== F O N T S ====== */
 @font-face {
+    font-family: 'futura_t_otregular';
+    src: url('../../_fonts/futura-t-ot-book_19064-webfont.woff2') format('woff2'),
+         url('../../_fonts/futura-t-ot-book_19064-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'futura_urw_extra_boldregular';
+    src: url('../../_fonts/futurat_bold-webfont.woff2') format('woff2'),
+         url('../../_fonts/futurat_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
     font-family: 'muller_bold';
     src: url('../../_fonts/muller_bold-webfont.eot');
     src: url('../../_fonts/muller_bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -19,14 +40,15 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
     font-style: normal;
 }
 
+
 /* ====== F O N T S (end) ====== */
 
 /*Eliminamos márgenes del "body" */
-html, body{ margin:0px; padding:0px; height:100%; }
+html, body{ margin:0px; padding:0px; height:100%;  font-family: 'futura_t_otregular';}
 
 #big-container /* Div que va a manterner el "footer" siempre al fondo */
 {
-	height: 100% !important;
+	height: auto !important;
     min-height:100% !important;
 	
 }
@@ -35,17 +57,25 @@ html, body{ margin:0px; padding:0px; height:100%; }
 
 a { text-decoration: none; }
 
+.col-50{ width:50%; display:inline-block;}
 /* HEADER */
 
 #logo {
  		width: 150px;
+		position:absolute;
+		bottom: -110px;
+    	left: 20px;
 	}
+	
+header{position:relative; display:block;}
 
 #menu_header {
 		box-sizing: border-box;
 		padding: 30px 50px;
 		text-align: right;
 		margin: 0px;
+		height:80px;
+		
 	}
 	#menu_header menuitem {
 			border-bottom: transparent 3px solid;
@@ -59,13 +89,193 @@ a { text-decoration: none; }
 		#menu_header menuitem a { color: #000000; }
 		#menu_header menuitem:hover { border-bottom-color: #9e8137; }
 			#menu_header menuitem:hover a { color: #9e8137; }
+			
+			
+/* INDEX */
 
+	#index	{}		
+	#welcome{
+			background-image:url(../../_images/galeria/welcomestd.jpg);
+			background-size:cover;
+			background-repeat:no-repeat;
+			height:500px;
+			background-position:center;
+			}	
+	
+	#welcome p{
+		 font-family: 'futura_urw_extra_boldregular';
+			text-align:center;
+			color:#ffffff;
+			display: block;
+   			padding: 150px;	
+			text-transform:uppercase;
+			}		
+	.jumbo {
+		font-size:7em;}
+	
+	.index-section{ display:block;}
+		.large-header {
+			position: relative;
+			background: #333;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center center;
+			z-index: 1;
+		}
+		
+		#large-header {
+			background-color:#FFFFFF;
+		}
+		
+		.sect-title {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate3d(-50%,-50%,0);
+			transform: translate3d(-50%,-50%,0);
+			
+		}
+		
+		#large-header .sect-title{
+			color: #0000000;
+			font-size: 3.2em;
+			font-family: 'futura_urw_extra_boldregular';
+			}
+	
+		
+		#ciudades-index{
+			background-image:url(../../_images/galeria/ciudades-index-bg.jpg);
+			height:500px;
+			background-position:center;	
+			position:relative;
+			-webkit-transition:all .8s ease;
+					-moz-transition:all .8s ease;
+					-ms-transition:all .8s ease;
+					-o-transition:all .8s ease;
+					transition:all .8s ease;
+			}
+		
+		#ciudades-index .sect-title{
+			text-transform:uppercase;
+			color: #ffffff;
+			font-family: 'futura_urw_extra_boldregular';
+			opacity:1;
+			-webkit-transition:all .8s ease;
+					-moz-transition:all .8s ease;
+					-ms-transition:all .8s ease;
+					-o-transition:all .8s ease;
+					transition:all .8s ease;
+			}
+		
+		.lista-ciudades{
+				-webkit-transition:all .8s ease;
+					-moz-transition:all .8s ease;
+					-ms-transition:all .8s ease;
+					-o-transition:all .8s ease;
+					transition:all .8s ease;
+					opacity:0;
+					}	
+			
+		.lista-ciudades p{
+					vertical-align: middle;
+					transform: translate(-50%, -50%);
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					text-align:center;
+					width:85%;
+					color:#ffffff;
+					border: 1px solid #ffffff;
+   					padding: 20% 2%;
+					-webkit-transition:all .8s ease;
+					-moz-transition:all .8s ease;
+					-ms-transition:all .8s ease;
+					-o-transition:all .8s ease;
+					transition:all .8s ease;}		
+					
+		#ciudades-index:hover .lista-ciudades{
+					opacity:1;}
+			
+		#ciudades-index:hover  .sect-title{
+					opacity:0;}
+						
+		#ciudades-index:hover {
+					filter: grayscale(100%); /* Current draft standard */
+					-webkit-filter: grayscale(100%); /* New WebKit */
+					-moz-filter: grayscale(100%);
+					-ms-filter: grayscale(100%); 
+					-o-filter: grayscale(100%);}	
+		
+		#third{
+			background-image:url(../../_images/galeria/third.jpg);
+			background-position:center;
+			height:500px;}	
+			
+		#last{
+				height:415px;}	
+			
+		#contacto-index{
+				height:100%;
+				}					
+				
+		#contacto-index img{
+				width:100%;
+				display:block;}		
+				
+		#contacto-index span{	 
+				font-family: 'futura_urw_extra_boldregular';
+				background-color:#f1f1f1;
+				color:#000000;
+				width:100%;
+				padding:15px 0px;
+				display:block;
+				padding-left:5px;
+				box-sizing:border-box;}	
+				
+		#index-clientes{
+				position:relative;
+				height:395px;}			
+					
+		#index-clientes .sect-title{
+				top:35%;
+				color:#000000;
+				font-family: 'futura_urw_extra_boldregular';
+				text-transform:uppercase;
+				}		
 /* FOOTER */
 
-#footer_cut { padding-top:40px; clear:both; }
+#footer_cut { padding-top:80px; clear:both; }
 
 footer { 
 		background-color:#9f8137;
-		margin-top: -50px;  
-		height: 50px; 
+		margin-top: -80px;  
+		height: 80px; 
 	}
+footer nav{
+		text-transform:uppercase;
+		color:#FFFFFF;
+		width:40%;
+		margin:0 auto;
+		text-align: center;
+		font-size:.7em;
+		padding:25px;
+		
+	}
+
+footer a{
+		text-decoration:none;
+		color:#FFFFFF;
+		
+	}	
+
+#TM {	
+		text-align:center;
+		background:#262011;	
+		color:#624f22;
+		font-size:.5em;
+		padding:5px;
+		}	
