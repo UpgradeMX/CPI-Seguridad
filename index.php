@@ -50,6 +50,7 @@
                     </div>
                 
                 </main>
+
         	<div id="footer_cut"></div>
         </div><!--END #big-container -->
         

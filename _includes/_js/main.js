@@ -116,8 +116,8 @@ function animatedBack() {
     }
 
     function scrollCheck() {
-        if(document.headersect.scrollTop > height) animateHeader = false;
-        else animateHeader = true;
+        if(document.headersect.scrollTop > height) {animateHeader = false;}
+        else {animateHeader = true;}
     }
 
    /* function resize() {
