@@ -23,7 +23,7 @@
 <!--[if lt IE 10]> <script type="text/javascript"> window.location = "./ie/" </script> <![endif]-->
 
 <!-- JS General -->
-<script type="text/javascript" src="_includes/_js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="_includes/_js/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="_includes/_js/main.js"></script>
 <!-- SPRY -->
 <script type="text/javascript" src="_includes/_js/spry/SpryValidationTextField.js"></script>
