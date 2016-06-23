@@ -19,13 +19,19 @@
 <link rel="stylesheet" type="text/css" media="only screen and (min-width:900px) and (max-width:1000px)" href="_includes/_css/std.css"/>
 <!-- SPRY -->
 <link rel="stylesheet" type="text/css" href="_includes/_css/SpryValidation.css"/>
+
+<!-- BX-SLIDER -->
+<link rel="stylesheet" type="text/css" href="_includes/_css/jquery.bxslider.css"/>
  
 <!--[if lt IE 10]> <script type="text/javascript"> window.location = "./ie/" </script> <![endif]-->
 
 <!-- JS General -->
 <script type="text/javascript" src="_includes/_js/jquery-1.8.3.min.js"></script>
+<<<<<<< Updated upstream
 <!--<script type="text/javascript" src="_includes/_js/jquery-1.9.1.min.js"></script>-->
 <!--<script type="text/javascript" src="_includes/_js/jquery-3.0.0.min.js"></script>-->
+=======
+>>>>>>> Stashed changes
 <script type="text/javascript" src="_includes/_js/main.js"></script>
 <!-- SPRY -->
 <script type="text/javascript" src="_includes/_js/spry/SpryValidationTextField.js"></script>
@@ -34,3 +40,4 @@
 <script type="text/javascript" src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
 <script type="text/javascript" src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
 <script type="text/javascript" src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
+<script type="text/javascript" src="_includes/_js/jquery.bxslider.min.js"></script>

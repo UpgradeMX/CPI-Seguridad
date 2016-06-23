@@ -7,7 +7,22 @@
         <?php include_once("phpAssets/head.php"); ?>
         
         <title>CPI Seguridad</title>
+	
+    <script>
+    $(document).ready(function(){
+	  $('.bxslider').bxSlider({
+		slideWidth: 300,
+		minSlides: 3,
+		maxSlides: 3,
+		slideMargin: 10,
+		auto: true,
+		pager:false
+		
+	  });
+	});
 
+    
+    </script>
     </head>
     <body>
     <?php include_once("phpAssets/analytics.php"); ?>
@@ -45,6 +60,29 @@
                     <span>Contacto 01 800 00 (34337)</span>
                     </div><div id="index-clientes" class="col-50">
                    	<h1 class="sect-title">algunos de nuestros clientes</h1> 
+                    
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="200">
+						  <defs>
+							<filter id="filter">
+							  <feGaussianBlur stdDeviation="5"/>
+							</filter>
+							<mask id="mask">
+							  <ellipse cx="50%" cy="50%" rx="25%" ry="25%" fill="white" filter="url(#filter)"></ellipse>
+							</mask>
+						  </defs>
+						      <ul class="bxslider" mask="url(#mask)">
+                      
+
+                          <li><img src="_images/clientes/ai.jpg" /></li>
+                          <li><img src="_images/clientes/alestra.jpg" /></li>
+                          <li><img src="_images/clientes/altta.jpg" /></li>
+                          <li><img src="_images/clientes/banorte.jpg" /></li>
+                          <li><img src="_images/clientes/bio.jpg" /></li>
+                          
+                        </ul>
+						  
+						</svg>
+                    
                     </div>
                     
                     </div>

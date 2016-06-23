@@ -253,14 +253,25 @@ header{position:relative; display:block;}
 				
 		#index-clientes{
 				position:relative;
-				height:395px;}			
+				height:395px;
+				vertical-align:top;}			
 					
 		#index-clientes .sect-title{
-				top:35%;
+				top:55%;
 				color:#000000;
 				font-family: 'futura_urw_extra_boldregular';
 				text-transform:uppercase;
-				}		
+				width:60%;
+				}	
+				
+		.bx-wrapper .bx-viewport{
+			box-shadow:none !important;
+			left:0 !important;}		
+			
+		.bx-wrapper{
+			top:75%;
+			  mask: url(#mask) !important;
+			}	
 /* NOSOTROS */
 	.img-title{
 	
