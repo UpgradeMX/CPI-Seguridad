@@ -18,9 +18,8 @@ $(document).ready(function() {
 
 //Cambio de tamaño en la vetana
 
-
 function animatedBack() {
-
+	"use strict";
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 	var secwidth = $("#large-header").width();
 
@@ -58,8 +57,8 @@ function animatedBack() {
             var closest = [];
             var p1 = points[i];
             for(var j = 0; j < points.length; j++) {
-                var p2 = points[j]
-                if(!(p1 == p2)) {
+                var p2 = points[j];
+                if(p1 != p2) {
                     var placed = false;
                     for(var k = 0; k < 5; k++) {
                         if(!placed) {
@@ -70,10 +69,10 @@ function animatedBack() {
                         }
                     }
 
-                    for(var k = 0; k < 5; k++) {
+                    for(var l = 0; l < 5; l++) {
                         if(!placed) {
-                            if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
-                                closest[k] = p2;
+                            if(getDistance(p1, p2) < getDistance(p1, closest[l])) {
+                                closest[l] = p2;
                                 placed = true;
                             }
                         }
@@ -99,25 +98,25 @@ function animatedBack() {
        // window.addEventListener('resize', resize);
     }
 
-	var headersect = $("#large-header");
-    function mouseMove(e) {
-        var posx = 0;
-		var posy = 0;
-        if (e.pageX || e.pageY) {
-            posx = e.pageX;
-            posy = e.pageY;
-        }
-        else if (e.clientX || e.clientY)    {
-            posx = e.clientX + document.body.scrollLeft; + document.documentElement.scrollLeft;
-            posy = e.clientY + document.body.scrollTop; + document.documentElement.scrollTop;
-        }
-        target.x = posx;
-        target.y = posy;
-    }
+	//var headersect = $("#large-header");
+ 	function mouseMove(e) {
+		//var posy = 0;
+		var posx = posy = 0;
+		if (e.pageX || e.pageY) {
+			posx = e.pageX;
+			posy = e.pageY;
+		}
+		else if (e.clientX || e.clientY)    {
+			posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+			posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+		}
+		target.x = posx;
+		target.y = posy;
+	}
 
     function scrollCheck() {
-        if(document.headersect.scrollTop > height) animateHeader = false;
-        else animateHeader = true;
+        if(document.body.scrollTop > height) {animateHeader = false;}
+        else {animateHeader = true;}
     }
 
    /* function resize() {
@@ -193,7 +192,7 @@ function animatedBack() {
         })();
 
         this.draw = function() {
-            if(!_this.active) return;
+            if(!_this.active) { return; }
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
             ctx.fillStyle = 'rgba(0,0,0,'+ _this.active+')';

@@ -15,4 +15,5 @@ RewriteEngine on
 	#Rewriterule ^categoria/(.+) categorias.php?tipo=$1
 	Rewriterule ^inicio index.php
 	Rewriterule ^nosotros nosotros.php
+	Rewriterule ^reclutamiento reclutamiento.php
 	

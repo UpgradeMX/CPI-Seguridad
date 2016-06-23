@@ -1,18 +1,19 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "sudi-upgrade";
-  src:url("cssAssets/fonts/sudi-upgrade.eot");
-  src:url("cssAssets/fonts/sudi-upgrade.eot?#iefix") format("embedded-opentype"),
-    url("cssAssets/fonts/sudi-upgrade.woff") format("woff"),
-    url("cssAssets/fonts/sudi-upgrade.ttf") format("truetype"),
-    url("cssAssets/fonts/sudi-upgrade.svg#sudi-upgrade") format("svg");
+  font-family: "upgrade";
+  src:url("fonts/upgrade.eot");
+  src:url("fonts/upgrade.eot?#iefix") format("embedded-opentype"),
+    url("fonts/upgrade.woff") format("woff"),
+    url("fonts/upgrade.ttf") format("truetype"),
+    url("fonts/upgrade.svg#upgrade") format("svg");
   font-weight: normal;
   font-style: normal;
 
 }
+
 [data-icon]:before {
-  font-family: "sudi-upgrade" !important;
+  font-family: "upgrade" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -26,7 +27,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "sudi-upgrade" !important;
+  font-family: "upgrade" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -97,7 +98,7 @@
 .icon-sudi-note:before {
   content: "y";
 }
-.icon-sudi-xml:before { 
+.icon-sudi-xml:before {
   content: "z";
 }
 .icon-sudi-zip:before {
