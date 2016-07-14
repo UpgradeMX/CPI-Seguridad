@@ -16,4 +16,5 @@ RewriteEngine on
 	Rewriterule ^inicio index.php
 	Rewriterule ^nosotros nosotros.php
 	Rewriterule ^reclutamiento reclutamiento.php
+	Rewriterule ^contacto contacto.php
 	

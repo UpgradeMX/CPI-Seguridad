@@ -10,14 +10,19 @@
 	
     <script>
     $(document).ready(function(){
+		var slidecount;
+		if ($(window).width() > 425){
+			slidecount = 3;
+			} else {slidecount = 2;}
+		
 	  $('.bxslider').bxSlider({
-		slideWidth: 300,
-		minSlides: 3,
-		maxSlides: 3,
+		slideWidth: 400,
+		minSlides: slidecount,
+		maxSlides: slidecount,
 		slideMargin: 10,
 		auto: true,
-		pager:false
-		
+		pager:false,
+		responsive:true	
 	  });
 	});
 
@@ -34,12 +39,18 @@
 						<span class="jumbo">20 años</span> <br>
 						prestando nuestros servicios de seguridad para la industria, el <br>
                         comercio, el turismo, la construcción y residencial</p>
+                        <div class="arrows">
+                        <div class="arrow arrow-1"></div>
+						<div class="arrow arrow-2"></div>
+                        </div>
                     </div>
                     
                     <div class="index-section">
                    	<div id="large-header" class="large-header col-50">
                       <canvas id="demo-canvas"></canvas>
-                        <h1 class="sect-title">CONFIANZA</h1>
+                        <h1 class="sect-title word-carousel" data-index="1">CONFIANZA</h1>
+                        <h1 class="sect-title word-carousel" data-index="2">PROTECCIÓN</h1>
+                        <h1 class="sect-title word-carousel" data-index="3">INTEGRIDAD</h1>
                     </div><div id="ciudades-index" class="col-50">
                     	<h1 class="sect-title">nuestras ciudades</h1>
                         <a href="">
@@ -56,21 +67,13 @@
                     
                     <div id="last" class="index-section">
                     <div id="contacto-index" class="col-50">
-                    <img src="_images/galeria/contacto-index-bg.jpg" alt="">
+                    <!--<img src="_images/galeria/contacto-index-bg.jpg" alt="">-->
                     <span>Contacto 01 800 00 (34337)</span>
                     </div><div id="index-clientes" class="col-50">
                    	<h1 class="sect-title">algunos de nuestros clientes</h1> 
                     
-                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="200">
-						  <defs>
-							<filter id="filter">
-							  <feGaussianBlur stdDeviation="5"/>
-							</filter>
-							<mask id="mask">
-							  <ellipse cx="50%" cy="50%" rx="25%" ry="25%" fill="white" filter="url(#filter)"></ellipse>
-							</mask>
-						  </defs>
-						      <ul class="bxslider" mask="url(#mask)">
+             
+						 <ul class="bxslider">
                       
 
                           <li><img src="_images/clientes/ai.jpg" /></li>
@@ -81,8 +84,6 @@
                           
                         </ul>
 						  
-						</svg>
-                    
                     </div>
                     
                     </div>

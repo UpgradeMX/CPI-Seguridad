@@ -63,14 +63,14 @@ h2{font-family: 'futura_urw_extra_boldregular'; letter-spacing:15px; text-transf
 .col-50{ width:50%; display:inline-block;}
 
 .page-title{
-	color:#ffffff; 
-	text-align:center;
-	position: absolute;
-	transform: translate(-50%,-50%);
-	left: 50%;
-	top: 50%;
-	 font-family: 'futura_urw_extra_boldregular';
-	 font-size:3em;
+		color:#ffffff; 
+		text-align:center;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		left: 50%;
+		top: 50%;
+		font-family: 'futura_urw_extra_boldregular';
+		font-size:3em;
 }		
 
 .sect-title {
@@ -91,12 +91,16 @@ h2{font-family: 'futura_urw_extra_boldregular'; letter-spacing:15px; text-transf
  		width: 150px;
 		position:absolute;
 		bottom: -110px;
-    	left: 20px;
+    	left: 40px;
+		z-index:11111;
 	}
 	
 header{position:relative; display:block;}
 
+.menu-height{height:1000px !important; }
+
 #menu_header {
+		
 		box-sizing: border-box;
 		padding: 30px 50px;
 		text-align: right;
@@ -118,15 +122,77 @@ header{position:relative; display:block;}
 			#menu_header menuitem:hover a { color: #9e8137; }
 			
 			
+	.menu-container{
+		display:none;
+		position: absolute;
+		right: 30px;
+		top: 20px;	
+					}		
+			
+	.menu-container .bars {
+		width: 120px;
+		height: 70px;
+		position: relative;
+		transition: transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+	}
+	.menu-container .bars span {
+		display: block;
+		width: 100%;
+		height: 10px;
+		background-color: #000000;
+		margin-top: 20px;
+	}
+	.menu-container .bars span:first-child {
+	  margin-top: 0;
+	  transform: scaleX(1);
+	  transition: transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+	  transition-delay: 0.4s;
+	}
+	.menu-container .bars span:nth-child(3) {
+	  width: 65%;
+	  transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+	  transition-delay: 0.4s;
+	}
+	.menu-container .bars .other-bar {
+	  width: 10px;
+	  height: 0;
+	  background-color:#000000;
+	  position: absolute;
+	  top: -23px;
+	  left: 50%;
+	  margin-left: -5px;
+	  transition: height 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
+	  z-index: 10;
+	}
+	.menu-container.is-menu-open .bars {
+	  transform: rotate(45deg);
+	  transition-delay: 0.4s;
+	}
+	.menu-container.is-menu-open .bars span:first-child {
+	  transform: scaleX(0);
+	  transition: transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+	}
+	.menu-container.is-menu-open .bars span:nth-child(3) {
+	  width: 0;
+	  transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+	}
+	.menu-container.is-menu-open .bars, .menu-container.is-menu-open .other-bar {
+	  height: 120px;
+	  transition: height 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+	  transition-delay: 0.3s;
+	}
+			
+			
+			
 /* INDEX */
 
 	#index	{}		
 	#welcome{
 			background-image:url(../../_images/galeria/welcomestd.jpg);
-			background-size:100%;
+			background-size:cover;
 			background-repeat:no-repeat;
-			height:500px;
-			background-position:bottom;
+			height:880px;
+			position:relative;
 			}	
 	
 	#welcome p{
@@ -136,9 +202,14 @@ header{position:relative; display:block;}
 			display: block;
    			padding: 150px;	
 			text-transform:uppercase;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			top: 45%;
 			}		
+			
 	.jumbo {
-		font-size:7em;}
+			font-size:7em;}
 	
 	.index-section{ display:block;}
 		.large-header {
@@ -158,19 +229,27 @@ header{position:relative; display:block;}
 			color: #0000000;
 			font-size: 3.2em;
 			font-family: 'futura_urw_extra_boldregular';
+			opacity:0;
+			-webkit-transition:all .8s ease;
+			-moz-transition:all .8s ease;
+			-ms-transition:all .8s ease;
+			-o-transition:all .8s ease;
+			transition:all .8s ease;
 			}
-	
+		.actual{opacity:1 !important;}	
 		
 		#ciudades-index{
 			background-image:url(../../_images/galeria/ciudades-index-bg.jpg);
 			height:500px;
 			background-position:center;	
-			position:relative;
+			position:relative; 
+			background-size: cover;
 			-webkit-transition:all .8s ease;
-					-moz-transition:all .8s ease;
-					-ms-transition:all .8s ease;
-					-o-transition:all .8s ease;
-					transition:all .8s ease;
+			-moz-transition:all .8s ease;
+			-ms-transition:all .8s ease;
+			-o-transition:all .8s ease;
+			transition:all .8s ease;
+					   
 			}
 		
 		#ciudades-index .sect-title{
@@ -179,10 +258,10 @@ header{position:relative; display:block;}
 			font-family: 'futura_urw_extra_boldregular';
 			opacity:1;
 			-webkit-transition:all .8s ease;
-					-moz-transition:all .8s ease;
-					-ms-transition:all .8s ease;
-					-o-transition:all .8s ease;
-					transition:all .8s ease;
+			-moz-transition:all .8s ease;
+			-ms-transition:all .8s ease;
+			-o-transition:all .8s ease;
+			transition:all .8s ease;
 			}
 		
 		.lista-ciudades{
@@ -227,6 +306,7 @@ header{position:relative; display:block;}
 		#third{
 			background-image:url(../../_images/galeria/third.jpg);
 			background-position:center;
+			background-size:cover;
 			height:500px;
 			margin-top:-10px;}	
 			
@@ -235,6 +315,9 @@ header{position:relative; display:block;}
 			
 		#contacto-index{
 				height:100%;
+				background-image:url(../../_images/galeria/contacto-index-bg.jpg);
+				background-size:cover;
+				position:relative;
 				}					
 				
 		#contacto-index img{
@@ -249,15 +332,22 @@ header{position:relative; display:block;}
 				padding:15px 0px;
 				display:block;
 				padding-left:5px;
-				box-sizing:border-box;}	
+				box-sizing:border-box;
+				position:absolute;
+				bottom:0;
+					-webkit-transition:all .8s ease;
+					-moz-transition:all .8s ease;
+					-ms-transition:all .8s ease;
+					-o-transition:all .8s ease;
+					transition:all .8s ease;}	
 				
 		#index-clientes{
 				position:relative;
-				height:395px;
+				height:500px;
 				vertical-align:top;}			
 					
 		#index-clientes .sect-title{
-				top:55%;
+				top:25%;
 				color:#000000;
 				font-family: 'futura_urw_extra_boldregular';
 				text-transform:uppercase;
@@ -265,13 +355,90 @@ header{position:relative; display:block;}
 				}	
 				
 		.bx-wrapper .bx-viewport{
-			box-shadow:none !important;
-			left:0 !important;}		
+			/*box-shadow:none !important;*/
+			left:0 !important;
+			height:inherit !important;
+			-moz-box-shadow: inset 0 0 10px #ffffff;
+			-webkit-box-shadow: inset 0 0 10px #ffffff;
+			box-shadow: inset 0 0 10px #ffffff !important;
+			box-sizing:border-box;}		
 			
 		.bx-wrapper{
-			top:75%;
-			  mask: url(#mask) !important;
+			
+			z-index:-1;
+			position:absolute !important;
+			top:60%;
 			}	
+		.about{
+			position: absolute;
+			height: 350px;
+			transform: translatex(-50%);
+			-webkit-transform: -webkit-translatex(-50%);
+			left: 50%;
+			
+		}
+		.arrows{
+			position: absolute;
+				left: 50%;
+				height: 400px;
+				bottom: -45px;
+			}	
+					
+			
+		.arrow {
+			  opacity: 0;
+			  position: absolute;
+			  left: 50%;
+			  top: 55%;
+			  transform-origin: 100% 50%;
+				-ms-transform-origin: 100% 50%; /* IE 9 */
+				-webkit-transform-origin: 100% 50%;
+			  transform: translate3d(-50%, -50%, 0);
+			}
+			
+			.arrow-1 {
+			  animation: arrow-movement 2s ease-in-out infinite;
+			}
+			
+			.arrow-2 {
+			  animation: arrow-movement 2s 1s ease-in-out infinite;
+			}
+			
+			.arrow:before,
+			.arrow:after {
+			  background: #fff;
+			  content: '';
+			  display: block;
+			  height: 3px;
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 30px;
+			}
+			
+			.arrow:before {
+			  transform: rotate(45deg) translateX(-23%);
+			  transform-origin: top left;
+			}
+			
+			.arrow:after {
+			  transform: rotate(-45deg) translateX(23%);
+			  transform-origin: top right;
+			}
+			
+			@keyframes arrow-movement {
+			  0% {
+				opacity: 0;
+				top: 45%;
+			  }
+			  70% {
+				opacity: 1;
+			  }
+			  100% {
+				opacity: 0;
+			  }
+			}
+	
 /* NOSOTROS */
 	.img-title{
 	
@@ -290,10 +457,11 @@ header{position:relative; display:block;}
 	#img-nosotros{
 		background-image:url(../../_images/galeria/nosotrosbg-title.jpg);
 		background-attachment: fixed;
+		background-repeat:no-repeat;
 		}
 
 	.img-title h1{
-		transform: translateZ(.25px) translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
 		left: 50%;
 		top: 25%;
 		z-index: 1;
@@ -352,14 +520,39 @@ header{position:relative; display:block;}
 		font-size:1.3em;
 		    margin: 40px;}
 	
-	#nosotros-reclutamiento span{
+	#btn-nosotros{
 		color:#9f8137;
 		border:#9f8137 solid 4px;
 		padding:15px;
 		letter-spacing:5px;
 		margin:10px;
-		
+		overflow:hidden;
+		transition: .3s;
+		position:relative;
 		}			
+		 
+	#btn-nosotros:after {
+     position: absolute;
+  transition: .3s;
+  content: '';
+  width: 0;
+  bottom: 0;
+  background: #9f8137;
+    height: 120%;
+  left: -10%;
+  transform: skewX(15deg);
+  z-index: -1;
+  }
+  	#btn-nosotros:hover {
+		 width: 100%;
+  		left: 0;
+		 color: #ffffff;
+
+}
+	#btn-nosotros:hover:after {
+ left: -10%;
+  width: 120%;
+}
 		
 /* RECLUTAMIENTO */
 	#img-reclutamiento{
@@ -385,7 +578,7 @@ header{position:relative; display:block;}
 		width:23%;
 		z-index:0;
 		position:absolute;
-		top: -20%;
+		top: -15%;
     	left: 25%;
 		opacity:.7;}
 			
@@ -393,16 +586,17 @@ header{position:relative; display:block;}
 		-webkit-filter: grayscale(100%);
 		filter: grayscale(100%);}
 	
-	#formulario{
-		width:25%;
+	.formulario{
+		width:30%;
 		float:right;
 		border: #000000 solid 4px;
-		margin-right:20%;
+		margin-right:15%;
 		position:relative;	
 		padding: 25px 40px;
 		right: 5%;}	
 		
-	#formulario input{
+	.formulario input{
+		font-size:1.7em;
 		display:block;
 		border:none;
 		border-bottom:#000000 solid 4px;
@@ -417,23 +611,24 @@ header{position:relative; display:block;}
 		
 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 		color: #000000;
-		font-size:2em;
+		
 		font-family: 'futura_urw_extra_boldregular';
 		}	
 	::-moz-placeholder { /* Firefox 19+ */
 	  color:  #000000;
-	  font-size:2em;
+	  
 	  font-family: 'futura_urw_extra_boldregular';
 	}
 	:-ms-input-placeholder { /* IE 10+ */
 	  color:  #000000;
-	  font-size:2em;
+	 
 	  font-family: 'futura_urw_extra_boldregular';
 	}
 	
 	input[type=submit]{
+		
 		position: absolute;
-		background-color: #9f8137;
+		background-color: #9f8137 !important;
 		border-bottom: none !important;
 		color: #ffffff;
 		padding: 10px !important;
@@ -443,7 +638,8 @@ header{position:relative; display:block;}
 		text-transform:uppercase;
 		}	
 		
-	#formulario select{
+	.formulario select{
+		font-size:1.7em;
 		font-family: 'futura_urw_extra_boldregular';
 		border: none;
 		background: none;
@@ -460,7 +656,7 @@ header{position:relative; display:block;}
 		background-position:right bottom;
 		background-size:15%;
 		cursor:pointer;
-		font-size:1.1em;
+		
 		}
 	
 	#contacto-reclutamiento{
@@ -488,20 +684,189 @@ header{position:relative; display:block;}
 		top:65%;
 		left:50%;
 		}	
+
+/*CONTACTO*/		
+		#contacto1{
+			height:500px;
+			
+			}
+		.sucursal-info, .sucursal-map{
+			width:50%;
+			height:100%;
+			display:inline-block;
+			box-sizing:border-box;
+			vertical-align:top;}	
+			
+		.sucursal-info hr{
+			 width: 85px;
+   			 border: #000000 2px solid;
+			}	
+		.sucursal-img{
+			background-color:#e2e2e2;
+			height:50%;}	
+			
+		.sucursal-info h2{
+			text-align:center;}
+			
+		.sucursal-info p{
+			margin:0px;
+			width:40%;
+			display:inline-block;
+			vertical-align:top;
+			padding: 30px;
+    		box-sizing: border-box;}	
+		.dropdown {
+			  position: relative;
+			  display: block;
+			  text-align: left;
+			  width: 200px;
+			  margin:0 auto;
+			  height: 115px;
+   			 margin-top: 60px;
+			}
+			
+			.dropdown-text {
+			  cursor: pointer;
+			  position: absolute;
+			  text-indent: 10px;
+			  line-height: 32px;
+			  background-color: #eee;
+			  border: 1px solid #ccc;
+			  border-radius: 10px;
+			  box-shadow: 0 1px 0 rgba(255,255,255, .9) inset, 0 1px 3px rgba(0,0,0, .1);
+			  width: 100%;
+			}
+			
+			.dropdown-text:after {
+			  position: absolute;
+			  right: 6px;
+			  top: 15px;
+			  content: '';
+			  width: 0px;
+			  height: 0px;
+			  border-style: solid;
+			  border-width: 5px 4px 0 4px;
+			  border-color: #555 transparent transparent transparent;
+			}
+			
+			.dropdown-text,
+			.dropdown-content a {
+			  color: #333;
+			  text-shadow: 0 1px #fff;
+			}
+			
+			.dropdown-toggle {
+			  font-size: 0;
+			  z-index: 1;
+			  cursor: pointer;
+			  position: absolute;
+			  top: 0;
+			  border: none;
+			  padding: 0;
+			  margin: 0 0 0 1px;
+			  background: transparent;
+			  text-indent: -10px;
+			  height: 34px;
+			  width: 100%;
+			}
+			
+			.dropdown-toggle:focus {
+			  outline: 0;
+			}
+			
+			.dropdown-content {
+			  -webkit-transition: all .25s ease;
+			  -moz-transition: all .25s ease;
+			  -ms-transition: all .25s ease;
+			  -o-transition: all .25s ease;
+			  transition: all .25s ease;
+			  list-style-type: none;
+			  position: absolute;
+			  top: 32px;
+			  padding: 0;
+			  margin: 0;
+			  opacity: 0;
+			  visibility:hidden;
+			  border-radius: 3px;
+			  text-indent: 10px;
+			  line-height: 32px;
+			  background-color: #eee;
+			  border: 1px solid #ccc;
+			  width: 200px;
+			}
+			
+			.dropdown-content a {
+			  display: block;
+			}
+			
+			.dropdown-content a:hover {
+			  background: #e8e8e8;
+			}
+			
+			
+			.dropdown-toggle:hover ~ .dropdown-text,
+			.dropdown-toggle:focus ~ .dropdown-text {
+			  background-color: #e8e8e8;
+			}
+			
+			.dropdown-toggle:focus ~ .dropdown-text {
+			  box-shadow: 0 1px 3px rgba(0,0,0, .2) inset, 0 1px 0 rgba(255,255,255, 0.8);
+			  z-index: 2;
+			}
+			
+			.dropdown-toggle:focus ~ .dropdown-text:after {
+			  border-width: 0 4px 5px 4px;
+			  border-color: transparent transparent #555 transparent;
+			}
+			
+			.dropdown-content:hover,
+			.dropdown-toggle:focus ~ .dropdown-content {
+			  opacity: 1;
+			  visibility:visible;
+			  top: 42px;
+			}	
+					
+			#formulario-contacto{
+					height:600px;}		
+			#formulario-contacto .formulario{
+				    margin: 0 auto;
+					display: block;
+					margin-top: 40px;
+					float: inherit;
+					right: inherit;}		
+					
+			#formulario-contacto input{
+					width:60%;}		
+					
+			/*MAPA*/		
+			#location_map{
+					margin: 0px auto;
+					height: auto;
+					width: 100%;
+				}
+				#location_map #google { 
+						display: block; 
+						height: 523px;
+						width:100%;  
+					}			
+		
+					
 /* FOOTER */
 
 #footer_cut { padding-top:80px; clear:both; }
 
 footer { 
+		z-index:1;
 		background-color:#9f8137;
 		margin-top: -80px;  
 		height: 80px; 
 		font-size: 1.4em;
 	}
 footer nav{
+	box-sizing:border-box;
 		text-transform:uppercase;
 		color:#FFFFFF;
-		width:40%;
+		width:60%;
 		margin:0 auto;
 		text-align: center;
 		font-size:.7em;
