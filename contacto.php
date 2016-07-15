@@ -13,7 +13,7 @@
 			
 			var address =[];
 			address[1] = ["Matriz Chihuahua","calle Falsa 123","663064633","31000"];
-			address[2] = ["Matriz tu corazon","Fake st 456","1234567","21310"];
+			address[2] = ["Matriz Mexico","Fake st 456","1234567","21310"];
 			
 				$('.dropdown-content a').click(function(e){
 					e.preventDefault();
