@@ -8,7 +8,10 @@ Fecha: CAMBIAR
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
 #welcome{height:680px; background-position:inherit; background-size:cover;}
 
-#welcome p {width: 60%;}
+#welcome p {width: 60%; padding: 100px;}
+
+.arrows{    bottom: -100px;}
+
 #contacto-index{background-position:center;}
 
 #contacto-reclutamiento{background-size: cover;}
@@ -16,6 +19,8 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
 #formulario-reclutamiento{padding-top:60px;}
 
 #formulario-reclutamiento img{top:-5%;}
+
+.formulario{width:45%;}
 
 .formulario input{width:65%;}
 

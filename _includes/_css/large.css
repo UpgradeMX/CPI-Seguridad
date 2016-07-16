@@ -318,13 +318,16 @@ header{position:relative; display:block;}
 				background-image:url(../../_images/galeria/contacto-index-bg.jpg);
 				background-size:cover;
 				position:relative;
-				}					
+				}	
+		#contacto-index:hover	{filter: brightness(.4);}
+		#contacto-index:hover span{ opacity:1;}						
 				
 		#contacto-index img{
 				width:100%;
 				display:block;}		
 				
 		#contacto-index span{	 
+				opacity:0;
 				font-family: 'futura_urw_extra_boldregular';
 				background-color:#f1f1f1;
 				color:#000000;
@@ -486,7 +489,7 @@ header{position:relative; display:block;}
 		
 	.nosotros-apt{
 		background:#ffffff;
-		height:200px;
+		height:300px;
 		padding:70px;
 		transform-style: inherit;
 		position:relative;}	

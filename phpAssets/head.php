@@ -12,25 +12,25 @@
 <link href="_includes/_fontastic/styles.css" rel="stylesheet" type="text/css"/> 
 
 <!-- CSS General -->
-<link rel="stylesheet" type="text/css" href="_includes/_css/large.css"/>
-<link rel="stylesheet" type="text/css" media="only screen and (min-width:1700px)"  href="_includes/_css/hd.css"/>
-<link rel="stylesheet" type="text/css" media="only screen and (min-width:10px) and (max-width:600px)"   href="_includes/_css/small.css"/>
-<link rel="stylesheet" type="text/css" media="only screen and (min-width:601px) and (max-width:900px)"  href="_includes/_css/medium.css"/>
-<link rel="stylesheet" type="text/css" media="only screen and (min-width:900px) and (max-width:1200px)" href="_includes/_css/std.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo $rootpath; ?>_includes/_css/large.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:1700px)"  href="<?php echo $rootpath; ?>_includes/_css/hd.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:10px) and (max-width:600px)"   href="<?php echo $rootpath; ?>_includes/_css/small.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:601px) and (max-width:900px)"  href="<?php echo $rootpath; ?>_includes/_css/medium.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:900px) and (max-width:1200px)" href="<?php echo $rootpath; ?>_includes/_css/std.css"/>
 <!-- SPRY -->
 <link rel="stylesheet" type="text/css" href="_includes/_css/SpryValidation.css"/>
 
 <!-- BX-SLIDER -->
-<link rel="stylesheet" type="text/css" href="_includes/_css/jquery.bxslider.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo $rootpath; ?>_includes/_css/jquery.bxslider.css"/>
  
 <!--[if lt IE 10]> <script type="text/javascript"> window.location = "./ie/" </script> <![endif]-->
 
 <!-- JS General -->
-<script type="text/javascript" src="_includes/_js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $rootpath; ?>_includes/_js/jquery-1.8.3.min.js"></script>
 <!--<script type="text/javascript" src="_includes/_js/jquery-1.9.1.min.js"></script>-->
 <!--<script type="text/javascript" src="_includes/_js/jquery-3.0.0.min.js"></script>-->
 
-<script type="text/javascript" src="_includes/_js/main.js"></script>
+<script type="text/javascript" src="<?php echo $rootpath; ?>_includes/_js/main.js"></script>
 <!-- SPRY -->
 <script type="text/javascript" src="_includes/_js/spry/SpryValidationTextField.js"></script>
 
@@ -42,4 +42,4 @@
 
 <!-- google maps -->
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
-<script type='text/javascript' src='_includes/_js/gmap3.min.js'></script>
+<script type='text/javascript' src='<?php echo $rootpath; ?>_includes/_js/gmap3.min.js'></script>

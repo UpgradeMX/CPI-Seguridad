@@ -9,12 +9,13 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
 
 header{height: 80px;}
 
-#menu_header{ opacity: .9;  height: 0px;   position: absolute;  z-index: 5;  width: 100%;background-color: #ffffff; padding: 0; overflow:hidden; margin-top:-12px;     margin-top: 68px;
+#menu_header{ opacity: .9;  height: 0px;   position: absolute;  z-index: 7;  width: 100%;background-color: #ffffff; padding: 0; overflow:hidden; margin-top:-12px;     margin-top: 68px;
 			-webkit-transition:all .9s ease;
 			-moz-transition:all .9s ease;
 			-ms-transition:all .9s ease;
 			-o-transition:all .9s ease;
-			transition:all .9s ease;		}
+			transition:all .9s ease;		
+			position:fixed;}
 
 
 #menu_header menuitem{    text-transform: uppercase;  font-size: 3em;  display: block; box-sizing: border-box;  padding: 20px; clear:both; margin-right: 40px;}

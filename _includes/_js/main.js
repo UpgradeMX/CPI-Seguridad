@@ -4,6 +4,18 @@
 $(document).ready(function() {
     thisResize();
 	
+	var device = navigator.userAgent;
+
+		if ( device.match(/iPhone|iPad|iPod/i))
+		{  $('.lista-ciudades').css('opacity','1');
+			$('#ciudades-index .sect-title').css('opacity',0);
+			$('.img-title h1').css('position','inherit');
+			$('.img-title h1').css('top','50%');
+			$('.background-fixed').css('background-attachment','inherit');
+			$('#img-reclutamiento').css('background-attachment','inherit');
+		 }
+	
+	
 	if($('.word-carousel')){
 	var palabra_actual = 0;
 	var word_interval = 3000;

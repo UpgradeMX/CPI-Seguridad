@@ -1,3 +1,5 @@
+<?php include ("Connections/connectMySql.php");?>
+<?php echo $_GET["ciudad"]; ?>
 <!DOCTYPE HTML>
 <html>
     <head>
