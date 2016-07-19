@@ -28,7 +28,7 @@ header{height: 80px;}
 
 .menu-container.is-menu-open .other-bar{ height: 51px;}
 
-#logo{bottom:inherit;}
+#logo{bottom:inherit;      left: 25px;   width: 140px;}
 
 #welcome{height: 600px; background-position: inherit; background-size: cover;}
 
@@ -53,6 +53,8 @@ header{height: 80px;}
 #third{  height:200px;  margin-top: -10px;  background-size: cover;}
 
 #index-clientes{height:300px;}
+
+#gradient-radial{bottom:-60px;}
 
 #index-clientes .sect-title{    font-size: 1.1em;}
 
