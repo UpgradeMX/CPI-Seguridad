@@ -20,7 +20,7 @@
                     </div>
                 <div id="formulario-reclutamiento">
                 <img class="bw" src="_images/galeria/reclutamiento-form.jpg" alt="">
-                    <div id="formulario">
+                    <div class="formulario">
                         <input type="text" placeholder="Nombre">
                         <input type="text" placeholder="Edad">
                         

@@ -3,3 +3,95 @@ CSS para pantallas medianas (Tablets)
 Ultima modificación por:
 Fecha:
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
+#index{height:3300px !important; }
+
+#logo {bottom: -110px; z-index: 10;}
+
+header{height: 80px;}
+
+#menu_header{ opacity: .9;  height: 0px;   position: absolute;  z-index: 7;  width: 100%;background-color: #ffffff; padding: 0; overflow:hidden; margin-top:-12px;     margin-top: 68px;
+			-webkit-transition:all .9s ease;
+			-moz-transition:all .9s ease;
+			-ms-transition:all .9s ease;
+			-o-transition:all .9s ease;
+			transition:all .9s ease;		
+			position:fixed;}
+
+
+#menu_header menuitem{    text-transform: uppercase;  font-size: 3em;  display: block; box-sizing: border-box;  padding: 20px; clear:both; margin-right: 40px;}
+
+.menu-container{    display: block;  position: initial; width: 17%; float: right;     margin-top: 2%;}
+
+.menu-container .bars{    width: 70px;}
+
+.menu-container .bars span{  margin-top: 10px; height: 8px;}
+
+.menu-container.is-menu-open .bars, .menu-container.is-menu-open .other-bar{height: 70px;}
+
+#welcome{height:960px; background-position:inherit; background-size:cover;}
+
+#welcome p{width:75%;}
+
+.arrows{bottom:30px;}
+
+#ciudades-index .sect-title{opacity:0;}
+
+#third{    height: 300px; background-size: cover;}
+
+.lista-ciudades{opacity:1;}
+
+.menu-container .bars .other-bar{width: 8px;top: -13px;}
+
+#welcome p{padding:140px;}
+
+.jumbo{font-size:5em;}
+
+.col-50{width:100%;}
+
+#img-nosotros{background-size:100%;}
+
+.nosotros-apt p{width:80%; padding-top:0;}
+
+.horizontal-line{left:100px;}
+
+.background-fixed{background-size:100%; background-attachment:inherit;}
+
+#img-reclutamiento{background-size:100%; }
+
+.img-title{    height: 370px;}
+
+.img-title h1{position:inherit;     top: 50%;}
+
+#descripcion-reclutamiento{ background-image:url(../../_images/galeria/reclutamiento-form.jpg); background-size:cover; filter: grayscale(100%); /* Current draft standard */
+    -webkit-filter: grayscale(100%); /* New WebKit */
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%);
+	}
+
+#descripcion-reclutamiento p{    width: 90%;  height: 140px; font-size: 1.2em; padding:80px 0;
+}
+
+#formulario-reclutamiento img{top: -10%; width:25%; display:none;}
+
+.formulario{width: 50%; right: 0%; top: 15%;}
+
+#formulario-contacto{font-size:.7em;}
+
+#formulario-contacto input{ width:70%;}
+
+.formulario select{width:70%;}
+
+#contacto-reclutamiento{background-size:cover; height:100px;}
+
+#contacto-reclutamiento .icon{top:80%;}
+
+#formulario-contacto { height: 700px;}
+
+.dropdown{margin-top:90px;}
+
+footer nav{width:100%; padding:10px;}
+
+footer a{margin:15px;}
+
+#TM{font-size:.7em; margin-top:10px;}

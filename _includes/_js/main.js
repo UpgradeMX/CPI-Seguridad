@@ -1,9 +1,46 @@
-// JavaScript Document
+                                                                                     // JavaScript Document
 
 
 $(document).ready(function() {
     thisResize();
-	animatedBack();
+	
+	var device = navigator.userAgent;
+
+		if ( device.match(/iPhone|iPad|iPod/i))
+		{  $('.lista-ciudades').css('opacity','1');
+			$('#ciudades-index .sect-title').css('opacity',0);
+			$('.img-title h1').css('position','inherit');
+			$('.img-title h1').css('top','50%');
+			$('.background-fixed').css('background-attachment','inherit');
+			$('#img-reclutamiento').css('background-attachment','inherit');
+		 }
+	
+	
+	if($('.word-carousel')){
+	var palabra_actual = 0;
+	var word_interval = 3000;
+	
+	setTimeout(function() {
+	word_change();
+	}, 1000);
+	setInterval(function() {word_change();}, word_interval);
+	
+	function word_change(){
+	if(palabra_actual == $('.word-carousel').length){palabra_actual=0;}
+	palabra_actual++;
+	$('.word-carousel').removeClass('actual');
+	
+	$('.word-carousel').each(function(index, element) {
+	//alert(rcm_actual + ' ' + $(this).data('index'));
+	   if($(this).data('index') == palabra_actual){ $(this).addClass('actual');}
+	});   
+	}
+	}   
+	
+	
+	
+	if($('#large-header').length){
+	animatedBack();}
 	/*$('.prueba').click(function(e) {
        
 	    var texto = $(this).html();
@@ -12,6 +49,11 @@ $(document).ready(function() {
 		$(this).css('margin-top','100px');
 		//alert(texto);
     });*/
+	
+	$('.menu-container').click(function(){
+		$('.menu-container').toggleClass('is-menu-open') ;
+		$('#menu_header').toggleClass('menu-height');
+		});
 	
 
 });
@@ -115,8 +157,10 @@ function animatedBack() {
 	}
 
     function scrollCheck() {
-        if(document.body.scrollTop > height) {animateHeader = false;}
-        else {animateHeader = true;}
+      //  if(document.body.scrollTop > height) {animateHeader = false;}
+        //else {
+			animateHeader = true;
+			//}
     }
 
    /* function resize() {
@@ -211,9 +255,11 @@ function animatedBack() {
 function thisResize() {
 	var heightContainer = $(window).height() - $('header').height() -70;
 		var ratio =  $(window).height() / $(window).width() * 100;
+		console.log(ratio);
 		if (  ratio <= 35 ){
 			
 		$('#welcome').height(heightContainer);
+		console.log('resize');
 		}
 	}
 var resizeTimer; $(window).resize(function () { if (resizeTimer) { clearTimeout(resizeTimer); } resizeTimer = setTimeout(function() { resizeTimer = null; thisResize(); }, 500);});

@@ -34,7 +34,7 @@
                     </div>
                 <div id="nosotros-reclutamiento" class="nosotros-apt">
                 	<h1>¿Quieres pertenecer al equipo?</h1>
-                    <a href=""><span>RECLUTAMIENTO</span></a>
+                    <a id="btn-nosotros" href="<?php echo $rootpath; ?>reclutamiento">RECLUTAMIENTO</a>
                 </div>
                 
                 </main>

@@ -4,3 +4,121 @@ Ultima modificación por:
 Fecha:
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
 
+header{height: 80px;}
+
+#menu_header{ opacity: .9;  height: 0px;   position: absolute;  z-index: 11111;  width: 100%;background-color: #ffffff; padding: 0; overflow:hidden; margin-top:-12px;     margin-top: 68px;
+-webkit-transition:all .9s ease;
+			-moz-transition:all .9s ease;
+			-ms-transition:all .9s ease;
+			-o-transition:all .9s ease;
+			transition:all .9s ease;		}
+
+#menu_header menuitem{ text-transform: uppercase;      font-size: 1.6em;  display: block; box-sizing: border-box;  padding: 20px; clear:both; margin-right: 40px;}
+
+.menu-container{ display: block;  position: initial; width: 17%; float: right;  margin-right: 30px;   margin-top: 6%;}
+
+
+.menu-container .bars{width: 50px;}
+
+.menu-container .bars span{  margin-top: 10px; height: 6px;}
+
+.menu-container.is-menu-open .bars, .menu-container.is-menu-open .other-bar{    height: 70px;}
+
+.menu-container .bars .other-bar{    width: 6px;        top: -6px; left: 51%;}
+
+.menu-container.is-menu-open .other-bar{ height: 51px;}
+
+#logo{bottom:inherit;      left: 25px;   width: 140px;}
+
+#welcome{height: 600px; background-position: inherit; background-size: cover;}
+
+#welcome p{ padding: 15px; font-size: .8em;  padding-top: 95px; width:80%;}
+
+.arrows{    bottom: -130px; left:45%;}
+
+.jumbo{font-size:3em;}
+
+.col-50{width:100%;}
+
+#large-header .sect-title{    font-size: 2.2em;}
+
+.lista-ciudades p{padding: 0% 2%;}
+
+#contacto-index{    height: auto;}
+
+#ciudades-index .lista-ciudades{opacity:1;}
+
+#ciudades-index .sect-title{opacity:0;}
+
+#third{  height:200px;  margin-top: -10px;  background-size: cover;}
+
+#index-clientes{height:300px;}
+
+#gradient-radial{bottom:-60px;}
+
+#index-clientes .sect-title{    font-size: 1.1em;}
+
+.img-title{        height: 300px;}
+
+.img-title, .background-fixed{  background-size: cover;   background-repeat:no-repeat;background-position: center;}
+
+.img-title h1{top:50%; font-size:1.8em; position: inherit;}
+
+#img-reclutamiento{    background-attachment: inherit;}
+
+#img-nosotros{ background-attachment: inherit;}
+
+.nosotros-apt{height: 400px; padding: 20px;}
+
+.horizontal-line{left: 25px;}
+
+.nosotros-apt h2{margin-left:0; text-align:center;}
+
+.nosotros-apt p{width:80%; padding-top:0; text-align:initial;}
+
+.background-fixed{background-attachment: inherit;}
+
+#formulario-reclutamiento{  padding-top:70px; height:500px;}
+
+#formulario-reclutamiento img{width:100%; top:0; left:0; display:none;}
+
+.formulario{font-size:.6em;}
+
+.formulario input{background-color:transparent;    padding: 30px 0 1px;   width: 90%;}
+
+.formulario select{  width: 90%;}
+
+#descripcion-reclutamiento p{width:80%;}
+
+#descripcion-reclutamiento{background-image:url(../../_images/galeria/reclutamiento-form.jpg);     background-size: cover; -webkit-filter: grayscale(100%); /* New WebKit */
+ -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%);}
+
+.formulario{width: 60%; margin: 0 auto; right:inherit; float:inherit;}
+
+#contacto-reclutamiento{padding:10px;background-size: cover;}
+
+#contacto-reclutamiento .icon{width: 15%; top: 85%;}
+
+#contacto1{height:800px;}
+
+.sucursal-info, .sucursal-map{width:100%;}
+
+.sucursal-info{height:500px;}
+
+.sucursal-info p{padding:15px;     font-size: .8em;}
+
+.sucursal-info h2{    font-size: .8em; letter-spacing: 0;}
+
+#location_map #google{height:300px;}
+
+#formulario-contacto input{width:90%;}
+
+footer{height:300px;}
+
+footer nav{    width: 70%;}
+
+footer a{display:block;     margin: 15px;}
+
+#TM{    font-size: .8em;}
