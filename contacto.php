@@ -1,5 +1,56 @@
-<?php include ("Connections/connectMySql.php");?>
-<?php echo $_GET["ciudad"]; ?>
+<?php 
+	include ("Connections/connectMySql.php");
+	include_once("spryClass/class.SpryTextfield.inc"); 
+	include_once("spryClass/class.SpryTextarea.inc"); 
+	
+	if ((isset($_POST["MMinsert"])) && ($_POST["MMinsert"] == "runContacto")) {
+	
+		$nombre = $_POST['name'];
+		$edad = $_POST['edad'];
+		$ciudad = $_POST['ciudad'];
+		$correo = $_POST['mail'];
+		 
+		$mailHeader = "From: " . $nombre . " \r\n";
+		$mailHeader .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+		$mailHeader .= "Mime-Version: 1.0 \r\n";
+		$mailHeader .= "Content-Type: text/html; charset=utf-8";
+		
+		$mailHeader2 = "From: contacto@cpi.com \r\n";
+		$mailHeader2 .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+		$mailHeader2 .= "Mime-Version: 1.0 \r\n";
+		$mailHeader2 .= "Content-Type: text/html; charset=utf-8";
+		
+		// Contactos a enviar el correo
+		$para = 'hugo.acosta@upgrade.com.mx';
+	
+		
+		// Incluir los estilos
+		include_once("correo/style.php");
+		include_once("correo/myStyle.php");
+		// Incluir Header y Footer
+		include_once('correo/correo_h&f.php');
+		// Contenido del mensaje enviado al usuario y al administrador
+		include_once('correo/correo_contenido.php');
+		// Función que crea toda la estructura del correo
+		include_once("correo/correo.php");
+		
+		// Correo al Administrador
+		$mailContentAdmin  = mailContent($style,$myStyle,$header,$mensaje_admin,$footer);
+		mail($para, utf8_decode("Contacto desde sitio web"), utf8_decode($mailContentAdmin), $mailHeader);		
+		// Correo al Usuario
+		$mailContentUser = mailContent($style,$myStyle,$header,$mensaje_usuario,$footer);
+		mail($correo, utf8_decode("CPI seguridad"), utf8_decode($mailContentUser), $mailHeader2);	
+		
+		//echo $mailContentAdmin.'<br/>'.$mailContentUser;	
+		
+		header("Location: ".$rootPath."contacto/enviado");
+		exit;
+	
+	}
+	
+	if( $_GET['status'] ) { $opacity = 'style="opacity:1;"'; }
+?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -165,7 +216,7 @@
                 </div>
                 
                 
-                <div class="dropdown">
+             <!--   <div class="dropdown">
                   <input class="dropdown-toggle" type="text">
                   <div class="dropdown-text">Buscar una sucursal</div>
                   <ul class="dropdown-content" >
@@ -173,16 +224,50 @@
                     <li><a data-lat="" data-long=""  data-zoom=""  data-info="2" href="editar-nombre-ciudad">Sucursal 2</a></li>
                     <li><a data-lat="" data-long=""  data-zoom="" href="editar-nombre-ciudad">Sucursal 3</a></li>
                   </ul>
-                </div>
+                </div>-->
                 <div id="formulario-contacto">
                 
-                    <div class="formulario">
-                        <input type="text" placeholder="Nombre">
-                        <input type="text" placeholder="Edad">
-                       	<input type="text" placeholder="Ciudad">
-                        <input type="email" placeholder="Correo electrónico">
-                        <input type="submit" placeholder="ENVIAR">       
-                    </div>
+                     <form action="<?php echo $rootPath; ?>contacto" method="post" class="formulario">
+                     
+                     	 <?php 
+                        $nombre = new input_textfield;
+                        $nombre->spry = "spryNombre";
+                        $nombre->name = "name";
+                        $nombre->hint = "Nombre";
+						$nombre->class = "nombre";
+                        $nombre->required = true;
+                        echo $nombre->display();
+						
+                        $edad = new input_textfield;
+						$edad->spry = "spryEdad";
+						$edad->name = "edad";
+						$edad->hint = "edad";
+                        $edad->required = true;
+                        echo $edad->display();
+						
+						$ciudad = new input_textfield;
+						$ciudad->spry = "spryCiudad";
+						$ciudad->name = "ciudad";
+						$ciudad->hint = "ciudad";
+                        $ciudad->required = true;
+                        echo $ciudad->display();
+						
+                        $correo = new input_textfield;
+                        $correo->spry = "spryMail";
+                        $correo->name = "mail";
+                        $correo->hint = "Correo electrónico";
+                        $correo->type = "email";
+                        $correo->required = true;
+                        echo $correo->display();
+                        
+                    
+						
+                    ?>
+                       
+                       
+                        <input type="submit" placeholder="ENVIAR">    
+                        <input type="hidden" name="MMinsert" value="runContacto"/>   
+                    </form>
                 </div>
                 </main>
         	<div id="footer_cut"></div>

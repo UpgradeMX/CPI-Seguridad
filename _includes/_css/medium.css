@@ -34,7 +34,7 @@ header{height: 80px;}
 
 .arrows{bottom:30px;}
 
-#ciudades-index .sect-title{opacity:0;}
+#ciudades-index .sect-title {opacity: 1; top: 25%;}
 
 #third{    height: 300px; background-size: cover;}
 
@@ -45,6 +45,8 @@ header{height: 80px;}
 #welcome p{padding:140px;}
 
 .jumbo{font-size:5em;}
+
+#contacto-index span{opacity:1;}
 
 .col-50{width:100%;}
 

@@ -1,10 +1,10 @@
 <footer>
 <nav>
-	<a href="">aviso de privacidad</a>
+	<a href="<?php echo $rootpath; ?>aviso-de-privacidad">aviso de privacidad</a>
     <a href="<?php echo $rootpath; ?>inicio">inicio</a>
     <a href="<?php echo $rootpath; ?>nosotros">nosotros</a>
     <a href="<?php echo $rootpath; ?>reclutamiento">reclutamiento</a>
-    <a href="">equipo</a>
+   <!-- <a href="">equipo</a>-->
     <a href="<?php echo $rootpath; ?>contacto">contacto</a>
 </nav>
 

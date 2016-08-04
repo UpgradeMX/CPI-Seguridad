@@ -6,7 +6,7 @@
 			<html>
 				<head>
 					<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-					<title>Ibance</title>
+					<title>CPI Seguridad</title>
 					<link rel="stylesheet" type="text/css" href="correo/style.css" media="screen" />
 					<link rel="stylesheet" type="text/css" href="correo/myStyle.css" media="screen" />
 				</head>
