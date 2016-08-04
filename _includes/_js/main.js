@@ -4,15 +4,25 @@
 $(document).ready(function() {
     thisResize();
 	
+	$('#btn-nosotros').on('click touchend', function(e) {
+    var el = $(this);
+    var link = el.attr('href');
+    window.location = link;
+	});
+	
 	var device = navigator.userAgent;
 
 		if ( device.match(/iPhone|iPad|iPod/i))
 		{  $('.lista-ciudades').css('opacity','1');
-			$('#ciudades-index .sect-title').css('opacity',0);
+			$('#ciudades-index .sect-title').css('opacity',1);
+			$('#ciudades-index .sect-title').css('width','100%');
 			$('.img-title h1').css('position','inherit');
 			$('.img-title h1').css('top','50%');
 			$('.background-fixed').css('background-attachment','inherit');
 			$('#img-reclutamiento').css('background-attachment','inherit');
+			$('#ciudades-index .sect-title').css('top','20%');
+			$('#img-nosotros').css('background-size','contain');
+			$('#contacto-index span').css('opacity','1');
 		 }
 	
 	

@@ -18,5 +18,6 @@ RewriteEngine on
 	Rewriterule ^reclutamiento reclutamiento.php
 	Rewriterule ^contacto/(.+) contacto.php?ciudad=$1
 	Rewriterule ^contacto contacto.php
+	Rewriterule ^aviso-de-privacidad avisoprivacidad.php
 	
 	
