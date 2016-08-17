@@ -2,7 +2,7 @@
 # FileName="Connection_php_mysql.htm"
 # Type="MYSQL"
 # HTTP="true"
-$server_source = "local"; // 'local' o 'remote'
+/*$server_source = "remote"; // 'local' o 'remote'
 
 $hostname_connectMySql = "localhost";
 
@@ -12,7 +12,7 @@ $database_connectMySql = "";
 $username_connectMySql = "root";
 $password_connectMySql = "root";
 else:
-$rootPath = 'http://sitio/'; 
+$rootPath = 'http://cpi.upgrade.red/'; 
 $database_connectMySql = "";
 $username_connectMySql = "";
 $password_connectMySql = "";
@@ -24,5 +24,7 @@ if (mysqli_connect_error()) {
     exit();
 }
 $GLOBALS['connectMySql'] = $connectMySql;
-mysqli_query($connectMySql,"SET NAMES 'utf8'");
+mysqli_query($connectMySql,"SET NAMES 'utf8'");*/
+
+$rootpath = 'http://cpi.upgrade.red/'; 
 ?>

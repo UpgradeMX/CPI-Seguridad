@@ -8,18 +8,24 @@ Fecha: CAMBIAR
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
 #welcome{height:680px; background-position:inherit; background-size:cover;}
 
-#welcome p {width: 60%;}
+#welcome p {width: 60%; padding: 100px;}
+
+.arrows{    bottom: -100px;}
+
 #contacto-index{background-position:center;}
 
 #contacto-reclutamiento{background-size: cover;}
 
-#formulario-reclutamiento{padding-top:60px;}
+#formulario-reclutamiento{padding-top:60px; font-size:.8em;}
 
-#formulario-reclutamiento img{top:-5%;}
+#formulario-reclutamiento img{top:-5%; left: 15%;}
+
+.formulario{width:45%; font-size:.8em;}
 
 .formulario input{width:65%;}
 
 .formulario select{width:65%;}
+
 
 .nosotros-apt p{padding-top:5px; width:60%;}
 

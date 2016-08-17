@@ -1,3 +1,4 @@
+<?php include ("Connections/connectMySql.php");?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -16,13 +17,17 @@
 			} else {slidecount = 2;}
 		
 	  $('.bxslider').bxSlider({
-		slideWidth: 400,
-		minSlides: slidecount,
-		maxSlides: slidecount,
-		slideMargin: 10,
-		auto: true,
-		pager:false,
-		responsive:true	
+		pause:0,	 
+	speed:3000, 	 
+	easing:'linear',
+    slideWidth: 300,
+    minSlides: 1,
+    maxSlides: 3,
+	moveSlides:1,
+    slideMargin: 10,
+	auto: true,
+	responsive: true,
+	pager:false
 	  });
 	});
 
@@ -53,9 +58,9 @@
                         <h1 class="sect-title word-carousel" data-index="3">INTEGRIDAD</h1>
                     </div><div id="ciudades-index" class="col-50">
                     	<h1 class="sect-title">nuestras ciudades</h1>
-                        <a href="">
+                        <a href="<?php echo $rootpath; ?>contacto">
                         <div class="lista-ciudades">
-                       		<p>Chihuahua • Hermosillo • Tijuana • Cancún • Tulum • Mexicali • San José del Cabo • Torreón • Saltillo • Gómez Palacio • Durango • El Salto • Santiago Papasquiaro • Guadalupe Victoria • Rodeo • Cuencamé • Vicente Guerrero • Canatlán • Monterrey • San Pedro Garza García • Reynosa • Matamoros • Río Bravo • San Fernando • Nuevo Laredo • Polanco • Santa Fe • Xochimilco • Ecatepec • Pachuca • Tizayuca • Querétaro de Arteaga • Puebla • Puerto Plata (República Dominicana)</p> 
+                       		<p>Chihuahua • Hermosillo• Tijuana • Cancún • Tulum • Mexicali • San José del Cabo • Torreón • Saltillo • Gómez Palacio • Durango • El Salto • Santiago Papasquiaro • Guadalupe Victoria • Rodeo • Cuencamé • Vicente Guerrero • Canatlán • Monterrey • San Pedro Garza García • Reynosa • Matamoros • Río Bravo • San Fernando • Nuevo Laredo • Polanco • Santa Fe • Xochimilco • Ecatepec • Pachuca • Tizayuca • Querétaro de Arteaga • Puebla • Puerto Plata (República Dominicana)</p>
                         </div>
                         </a>
                     </div>
@@ -68,11 +73,11 @@
                     <div id="last" class="index-section">
                     <div id="contacto-index" class="col-50">
                     <!--<img src="_images/galeria/contacto-index-bg.jpg" alt="">-->
-                    <span>Contacto 01 800 00 (34337)</span>
+                    <span>Contacto <a href="tel:018000034337">01 800 00 (34337)</a></span>
                     </div><div id="index-clientes" class="col-50">
                    	<h1 class="sect-title">algunos de nuestros clientes</h1> 
                     
-             
+             			<div id="gradient-radial"></div>
 						 <ul class="bxslider">
                       
 

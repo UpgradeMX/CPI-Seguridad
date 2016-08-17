@@ -277,7 +277,7 @@ header{position:relative; display:block;}
 					vertical-align: middle;
 					transform: translate(-50%, -50%);
 					position: absolute;
-					top: 50%;
+					top: 48%;
 					left: 50%;
 					text-align:center;
 					width:85%;
@@ -318,15 +318,24 @@ header{position:relative; display:block;}
 				background-image:url(../../_images/galeria/contacto-index-bg.jpg);
 				background-size:cover;
 				position:relative;
-				}					
+				}	
+		#contacto-index:hover	{
+				/* -webkit-filter:brightness(.4);	
+				filter: brightness(.4);*/}
+		#contacto-index:hover span{ 
+				opacity:1;
+				 -webkit-filter:brightness(1);	
+				filter: brightness(1);}						
 				
 		#contacto-index img{
 				width:100%;
 				display:block;}		
 				
 		#contacto-index span{	 
+				z-index:1000;
+				opacity:0;
 				font-family: 'futura_urw_extra_boldregular';
-				background-color:#f1f1f1;
+				background-color:#b7b7b7;
 				color:#000000;
 				width:100%;
 				padding:15px 0px;
@@ -340,6 +349,8 @@ header{position:relative; display:block;}
 					-ms-transition:all .8s ease;
 					-o-transition:all .8s ease;
 					transition:all .8s ease;}	
+					
+		#contacto-index span a{color:#FFFFFF;}			
 				
 		#index-clientes{
 				position:relative;
@@ -353,6 +364,17 @@ header{position:relative; display:block;}
 				text-transform:uppercase;
 				width:60%;
 				}	
+				
+		#gradient-radial{
+			background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 98%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+			background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 98%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 98%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			position:absolute;
+			height:200px;
+			width:100%;
+			bottom:0%
+			}		
 				
 		.bx-wrapper .bx-viewport{
 			/*box-shadow:none !important;*/
@@ -486,7 +508,7 @@ header{position:relative; display:block;}
 		
 	.nosotros-apt{
 		background:#ffffff;
-		height:200px;
+		height:300px;
 		padding:70px;
 		transform-style: inherit;
 		position:relative;}	
@@ -639,7 +661,7 @@ header{position:relative; display:block;}
 		}	
 		
 	.formulario select{
-		font-size:1.7em;
+		font-size:1em;
 		font-family: 'futura_urw_extra_boldregular';
 		border: none;
 		background: none;
@@ -669,12 +691,14 @@ header{position:relative; display:block;}
 		}		
 	
 	#contacto-reclutamiento h1, #contacto-reclutamiento span, #contacto-reclutamiento i{
-		color:#ffffff;
+		color:#ffffff !important;
 		text-align:center;
 		display:block;
 		text-transform:uppercase;
 		font-family: 'futura_urw_extra_boldregular';
 		}	
+		
+	#contacto-reclutamiento a{color:#ffffff !important;}	
 		
 	#contacto-reclutamiento .icon{
 		position:absolute;
@@ -850,41 +874,49 @@ header{position:relative; display:block;}
 						width:100%;  
 					}			
 		
+			/* AVISO DE PRIVACIDAD */	
+			#aviso{
+				display:block;
+				padding:50px;
+				box-sizing:border-box;
+				width:85%;
+				margin:0 auto;}
+			#aviso h1{text-align:center;}	
+				
+			/* FOOTER */
+
+			#footer_cut { padding-top:80px; clear:both; }
+			
+			footer { 
+					z-index:1;
+					background-color:#9f8137;
+					margin-top: -80px;  
+					height: 80px; 
+					font-size: 1.4em;
+				}
+			footer nav{
+				box-sizing:border-box;
+					text-transform:uppercase;
+					color:#FFFFFF;
+					width:60%;
+					margin:0 auto;
+					text-align: center;
+					font-size:.7em;
+					padding:25px;
 					
-/* FOOTER */
-
-#footer_cut { padding-top:80px; clear:both; }
-
-footer { 
-		z-index:1;
-		background-color:#9f8137;
-		margin-top: -80px;  
-		height: 80px; 
-		font-size: 1.4em;
-	}
-footer nav{
-	box-sizing:border-box;
-		text-transform:uppercase;
-		color:#FFFFFF;
-		width:60%;
-		margin:0 auto;
-		text-align: center;
-		font-size:.7em;
-		padding:25px;
-		
-	}
-
-footer a{
-		text-decoration:none;
-		color:#FFFFFF;
-		margin:10px;
-		
-	}	
-
-#TM {	
-		text-align:center;
-		background:#262011;	
-		color:#624f22;
-		font-size:.5em;
-		padding:5px;
-		}	
+				}
+			
+			footer a{
+					text-decoration:none;
+					color:#FFFFFF;
+					margin:10px;
+					
+				}	
+			
+			#TM {	
+					text-align:center;
+					background:#262011;	
+					color:#624f22;
+					font-size:.5em;
+					padding:5px;
+					}	
