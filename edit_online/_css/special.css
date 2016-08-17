@@ -1,0 +1,102 @@
+/* CSS Document */
+/*//\\//\\//\\//\\//\\//\\//\\//\\//\\ E D I T //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\*/
+div#LoadContent{
+   /* background-color: rgba(0, 0, 0, 0.84);*/
+    position: fixed;
+    z-index: 100000;
+	display:none;
+}
+div#LoadContent section#content-loaded{
+	width: 500px;
+    max-height: 600px;
+    background-color: rgba(0, 0, 0, 0.29);
+    position: fixed;
+    border-radius: 20px;
+    right: 50px;
+    margin-top: 200px;
+    border: solid 2px #c7c7c7;
+	-webkit-box-shadow: 3px 2px 113px -23px rgba(255,255,255,1);
+	-moz-box-shadow: 3px 2px 113px -23px rgba(255,255,255,1);
+	box-shadow: 3px 2px 113px -23px rgba(255,255,255,1);
+}
+div#LoadContent img.close{
+	width: 20px;
+    margin: 10px;
+    float: right;
+	cursor:pointer;
+}
+div#LoadContent .clear{
+	clear:both;
+}
+	/*//\\//\\//\\ I N P U T S //\\//\\//\\*/
+	#form_inputs{
+		width: 80%;
+		height: 80%;
+		padding: 50px;
+	}
+	div#LoadContent input[type="text"], div#LoadContent input[type="password"]{
+		padding: 10px 15px;
+		background: white;
+		width: 100%;
+		font-size: 1em;
+		margin: 10px 0px;
+		border-radius: 6px;
+		border: none;
+		box-sizing: border-box;
+	}
+	div#LoadContent .tiitle{
+		    color: #FFFFFF;
+			font-size: 1.4em;
+			border-bottom: dotted thin #c7c7c7;
+			display: block;
+	}
+	div#LoadContent input[type="submit"]{
+		    width: 90px;
+			background-color: rgb(179, 158, 44) !important;
+			padding: 5px 0px !important;
+			border: none;
+			float: right;
+			border-radius: 5px;
+			text-transform: none;
+			position: initial;
+			cursor:pointer;
+	}
+	/*div#LoadContent textarea{
+		width: 100%;
+		border: none;
+		border-radius: 5px;
+		padding: 17px 5px 0px 5px;
+		box-sizing: border-box;
+		font-size: 1em;
+		margin-top: 5px;
+		resize: none;
+	}*/
+/*//\\//\\//\\//\\//\\//\\//\\// E D I T ( E N D ) \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\*/
+.img_edit{
+	display: inline-block;
+    cursor: pointer;
+    margin-top: -50px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+#old_data{
+	overflow: scroll;
+    max-height: 200px;
+    box-sizing: border-box;
+}
+
+section#old_data p {
+    color: #FFFFFF;
+    cursor: pointer;
+    background-image: url('../../edit_online/_img/cursor.svg');
+    background-size: 10px;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+}
+section#old_data span {
+    color: #a2a2a2;
+    font-size: 12px;
+    border-bottom: dotted thin;
+}

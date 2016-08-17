@@ -46,7 +46,7 @@ canvas#demo-canvas{width:100%!important}
 
 .lista-ciudades p{padding: 0% 2%;}
 
-#contacto-index{    height: auto;}
+#contacto-index{    height: 300px;}
 
 #ciudades-index{height:700px;}
 
@@ -60,7 +60,7 @@ canvas#demo-canvas{width:100%!important}
 
 .bx-wrapper{width:100% !important;}
 
-#gradient-radial{bottom:-60px;}
+#gradient-radial{bottom:0px;}
 
 #contacto-index span{opacity:1;}
 
@@ -128,5 +128,7 @@ footer{height:300px;}
 footer nav{    width: 70%;}
 
 footer a{display:block;     margin: 15px;}
+
+footer .icon{    transform: translatex(-50%); left: 50%;  top: 200px;}
 
 #TM{    font-size: .8em;}

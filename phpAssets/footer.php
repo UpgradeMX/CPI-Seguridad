@@ -6,6 +6,8 @@
     <a href="<?php echo $rootpath; ?>reclutamiento">reclutamiento</a>
    <!-- <a href="">equipo</a>-->
     <a href="<?php echo $rootpath; ?>contacto">contacto</a>
+    
+    <a target="_blank" href="https://www.facebook.com/CPISEGURIDADPRIVADA/"><i class="icon icon-sudi-facebook"></i></a>
 </nav>
 
 <div id="TM">
