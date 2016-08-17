@@ -1,3 +1,16 @@
+<?php include_once("./edit_online/_session/_request.php"); include_once ("../../sudi_cpi_assets/connectMySql.php");?>
+<?php 
+$query_rsData = "SELECT * FROM data_tb;";
+$rsData = mysqli_query($connectMySql,$query_rsData);
+$row_rsData = mysqli_fetch_assoc($rsData);
+$totalRows_rsData = mysqli_num_rows($rsData);
+$arrayData = array();
+do{
+$arrayData[$row_rsData["data_id"]]=$row_rsData["data_text"];
+}while($row_rsData = mysqli_fetch_assoc($rsData));
+
+if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
+ }?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -10,6 +23,7 @@
 
     </head>
     <body>
+    <div id="LoadContent"></div>
     <?php include_once("phpAssets/analytics.php"); ?>
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
@@ -17,17 +31,17 @@
 				<main id="nosotros">
                 <div class="nosotros-apt">
                     <h2>Historia</h2>
-                    <p>Fundada en la ciudad de Chihuahua, México en el año de 1996. Nuestra visión empresarial fue y es que todos nuestros colaboradores se sientan protegidos como en 					 familia. Actualmente nuestro estado de fuerza es representado por excelentes elementos intramuros y escoltas armados.</p>
+                    <p class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_5_&_table_:_data_tb"<?php }?>><?php echo $arrayData["5"];?></p>
                 </div>
               		<div id="one" class="background-fixed"></div>
                     <div class="nosotros-apt">
                     <h2>Misión</h2>
-                    <p>Servir con excelencia de una manera integral, con valores y principios humanos, asegurando así la protección de personas y bienes.</p>
+                    <p class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_6_&_table_:_data_tb"<?php }?>><?php echo $arrayData["6"];?></p>
                     </div>
                 	<div id="two" class="background-fixed"></div>
                     <div class="nosotros-apt">
                     <h2>visión</h2>
-                    <p>Representar en materia de seguridad la primera y mejor opción en la República Mexicana.</p>
+                    <p class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_7_&_table_:_data_tb"<?php }?>><?php echo $arrayData["7"];?></p>
                     </div>
                 <div id="nosotros-reclutamiento" class="nosotros-apt">
                 	<h1>¿Quieres pertenecer al equipo?</h1>

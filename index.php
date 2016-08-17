@@ -53,9 +53,10 @@ if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
         	 <?php include_once("phpAssets/header.php"); ?>
 				<main id="index">
                 	<div id="welcome">
-                    <p><span class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_1_&_table_:_data_tb"<?php }?>><?php echo $arrayData["1"];?></span><br>
+                    <p><span style="font-size: 1.5em;" class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_1_&_table_:_data_tb"<?php }?>><?php echo $arrayData["1"];?></span><br>
 <span class="jumbo <?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_2_&_table_:_data_tb"<?php }?>><?php echo $arrayData["2"];?></span> <br>
-<span class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_3_&_table_:_data_tb"<?php }?>><?php echo $arrayData["3"];?></span></p>
+<span class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_3_&_table_:_data_tb"<?php }?> style="font-size: 1.5em;"Kovaciw40
+><?php echo $arrayData["3"];?></span></p>
                    
                         <div class="arrows">
                         <div class="arrow arrow-1"></div>
@@ -80,7 +81,7 @@ if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
                     </div>
                     
                     <div id="third" class="index-section">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <h1 class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_4_&_table_:_data_tb"<?php }?>><?php echo $arrayData["4"];?></h1>
                     </div>
                     
                     <div id="last" class="index-section">

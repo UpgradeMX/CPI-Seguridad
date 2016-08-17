@@ -105,6 +105,12 @@ $(document).ready(function() {
 
 //Cambio de tamaño en la vetana
 
+$(document).on("click",".close",function(e) {
+		"use strict";
+        $("#LoadContent").html("");
+		$("#LoadContent").css("display","none");
+});
+
 function animatedBack() {
 	"use strict";
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;

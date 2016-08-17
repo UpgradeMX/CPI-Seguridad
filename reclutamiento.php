@@ -1,5 +1,17 @@
+<?php  include_once("./edit_online/_session/_request.php"); include_once ("../../sudi_cpi_assets/connectMySql.php");?>
 <?php 
-	include ("Connections/connectMySql.php");
+	$query_rsData = "SELECT * FROM data_tb;";
+	$rsData = mysqli_query($connectMySql,$query_rsData);
+	$row_rsData = mysqli_fetch_assoc($rsData);
+	$totalRows_rsData = mysqli_num_rows($rsData);
+	$arrayData = array();
+	do{
+	$arrayData[$row_rsData["data_id"]]=$row_rsData["data_text"];
+	}while($row_rsData = mysqli_fetch_assoc($rsData));
+	
+	if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
+	 }
+
 	include_once("spryClass/class.SpryTextfield.inc"); 
 	include_once("spryClass/class.SpryTextarea.inc"); 
 	include_once("spryClass/class.SprySelect.inc");
@@ -64,13 +76,14 @@
 
     </head>
     <body>
+    <div id="LoadContent"></div>
     <?php include_once("phpAssets/analytics.php"); ?>
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
              	<div id="img-reclutamiento" class="img-title"> <h1 class="page-title">RECLUTAMIENTO</h1> </div>
 				<main id="reclutamiento">
                     <div id="descripcion-reclutamiento">
-                        <p>Los aspirantes a ingresar a nuestra familia son seleccionados cumpliendo con los estándares establecidos por las Autoridades de Seguridad Pública, además de examen médico, antidoping, físico, psicológico y socioeconómico.</p>
+                        <p class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_8_&_table_:_data_tb"<?php }?>><?php echo $arrayData["8"];?></p>
                     </div>
                 <div id="formulario-reclutamiento">
                 <img class="bw" src="_images/galeria/reclutamiento-form.jpg" alt="">
