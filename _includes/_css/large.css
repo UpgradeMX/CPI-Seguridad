@@ -58,7 +58,7 @@ html, body{ margin:0px; padding:0px; height:100%;  font-family: 'futura_t_otregu
 
 a { text-decoration: none; }
 
-h2{font-family: 'futura_urw_extra_boldregular'; letter-spacing:15px; text-transform:uppercase;}
+h2{font-family: 'futura_urw_extra_boldregular'; letter-spacing:10px; text-transform:uppercase;}
 
 .col-50{ width:50%; display:inline-block;}
 
@@ -308,8 +308,18 @@ header{position:relative; display:block;}
 			background-position:center;
 			background-size:cover;
 			height:500px;
-			margin-top:-10px;}	
-			
+			margin-top:-10px;
+			-webkit-filter: grayscale(0.5);
+				background-color: #253243;
+				background-blend-mode: overlay;
+				opacity: .8;
+				position:relative;}	
+			#third h1{
+				position:absolute;
+				transform:translate(-50%,-50%);
+				left:50%;
+				top:60%;
+				color:#FFFFFF;}
 		#last{
 				height:605px;}	
 			
@@ -317,23 +327,22 @@ header{position:relative; display:block;}
 				height:100%;
 				background-image:url(../../_images/galeria/contacto-index-bg.jpg);
 				background-size:cover;
+				background-position:center;
 				position:relative;
+				
 				}	
 		#contacto-index:hover	{
 				/* -webkit-filter:brightness(.4);	
 				filter: brightness(.4);*/}
-		#contacto-index:hover span{ 
-				opacity:1;
-				 -webkit-filter:brightness(1);	
-				filter: brightness(1);}						
+					
 				
 		#contacto-index img{
 				width:100%;
 				display:block;}		
 				
 		#contacto-index span{	 
+				font-size:1.2em;
 				z-index:1000;
-				opacity:0;
 				font-family: 'futura_urw_extra_boldregular';
 				background-color:#b7b7b7;
 				color:#000000;
@@ -614,7 +623,7 @@ header{position:relative; display:block;}
 		border: #000000 solid 4px;
 		margin-right:15%;
 		position:relative;	
-		padding: 25px 40px;
+		padding: 40px 40px;
 		right: 5%;}	
 		
 	.formulario input{
@@ -661,7 +670,7 @@ header{position:relative; display:block;}
 		}	
 		
 	.formulario select{
-		font-size:1em;
+		font-size:.8em;
 		font-family: 'futura_urw_extra_boldregular';
 		border: none;
 		background: none;
@@ -684,8 +693,9 @@ header{position:relative; display:block;}
 	#contacto-reclutamiento{
 		background-image:url(../../_images/galeria/reclutamiento-contacto.jpg);
 		background-size: 100%;
+		background-repeat:no-repeat;
 		background-position: center;
-		height: 200px;
+		height: 130px;
     	padding: 150px;
 		position:relative;
 		}		
@@ -705,15 +715,24 @@ header{position:relative; display:block;}
 		width:3%;
 		font-size:2em;
 		transform:translate(-50%,-50%);
-		top:65%;
+		top:75%;
 		left:50%;
 		}	
-
+	
 /*CONTACTO*/		
+		textarea{
+			resize:none;
+			outline:none;
+			border:4px solid #000000;
+			color:#000000;
+			display:block;
+			margin:0 auto;}
 		#contacto1{
 			height:500px;
 			
 			}
+			
+		#formulario-contacto label{ display:block; text-align:center;  font-family: 'futura_urw_extra_boldregular';}	
 		.sucursal-info, .sucursal-map{
 			width:50%;
 			height:100%;
@@ -895,7 +914,8 @@ header{position:relative; display:block;}
 					font-size: 1.4em;
 				}
 			footer nav{
-				box-sizing:border-box;
+					position:relative;
+					box-sizing:border-box;
 					text-transform:uppercase;
 					color:#FFFFFF;
 					width:60%;
@@ -911,7 +931,12 @@ header{position:relative; display:block;}
 					color:#FFFFFF;
 					margin:10px;
 					
-				}	
+				}
+				
+			footer .icon{
+					font-size:2em;
+					position:absolute;
+					top:20px;}		
 			
 			#TM {	
 					text-align:center;

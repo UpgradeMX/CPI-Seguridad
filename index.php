@@ -67,7 +67,7 @@
                     </div>
                     
                     <div id="third" class="index-section">
-                    
+                    <h1>Lorem ipsum dolor sit amet.</h1>
                     </div>
                     
                     <div id="last" class="index-section">

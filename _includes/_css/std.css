@@ -12,15 +12,20 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ */
 
 .arrows{    bottom: -100px;}
 
+.img-title h1{top:30%;}
+
 #contacto-index{background-position:center;}
 
 #contacto-reclutamiento{background-size: cover;}
 
-#formulario-reclutamiento{padding-top:60px; font-size:.8em;}
+#formulario-reclutamiento{padding-top:60px; font-size:.9em;}
 
 #formulario-reclutamiento img{top:-5%; left: 15%;}
 
-.formulario{width:45%; font-size:.8em;}
+.textfieldRequiredState .textfieldRequiredMsg, .textfieldInvalidFormatState .textfieldInvalidFormatMsg, .textfieldMinValueState .textfieldMinValueMsg, .textfieldMaxValueState .textfieldMaxValueMsg, .textfieldMinCharsState .textfieldMinCharsMsg, .textfieldMaxCharsState .textfieldMaxCharsMsg{
+	margin-left:5%;}
+
+.formulario{width:40%; font-size:.9em;}
 
 .formulario input{width:65%;}
 
