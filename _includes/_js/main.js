@@ -4,6 +4,41 @@
 $(document).ready(function() {
     thisResize();
 	
+	$("#login-btn").click(function() {
+		event.preventDefault();
+		var cargar = $(this).data("load");
+		var datos = $(this).data("datos");
+		loadContent(cargar,datos);
+	});
+	
+	$(".edit_log").each(function(index, element) {
+		"use strict";
+        var color = $(this).css("color");
+		$(this).css({
+			"cursor" : "pointer",
+			"background-image" : "url('./edit_online/_img/edit-white.svg')",
+			"background-repeat" : "no-repeat",
+			"background-size" : "20px",
+			"background-position" : "right",
+			"padding" : "0px 28px"
+		  
+		});
+		if(color=="rgb(255, 255, 255)"){
+			
+		}else{
+			
+		}
+    });
+	
+	$(".edit_log").click(function(e) {
+		event.preventDefault();
+		var cont = $(this);
+		var cargar = cont.data("load");
+		var datos = cont.data("datos");
+		loadContent(cargar,datos);
+		//alert(cont.data("id")+', table'+cont.data("table"));
+    });
+	
 	$('#btn-nosotros').on('click touchend', function(e) {
     var el = $(this);
     var link = el.attr('href');

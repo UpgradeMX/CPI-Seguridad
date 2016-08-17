@@ -48,6 +48,7 @@
 								<p><strong>Nombre : </strong>'.$nombre.'</p><br>
 								<p><strong>Edad : </strong>'.$edad.'</p><br>
 								<p><strong>Ciudad : </strong>'.$ciudad.'</p><br>
+								<p><strong>Mensaje : </strong>'.$mensaje.'</p><br>
 								<p>
 									<strong>Responder : </strong><a href="mailto:'.$correo.'">'.$correo.'</a>
 								</p>

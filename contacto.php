@@ -9,6 +9,7 @@
 		$edad = $_POST['edad'];
 		$ciudad = $_POST['ciudad'];
 		$correo = $_POST['mail'];
+		$mensaje = $_POST['mensaje'];
 		 
 		$mailHeader = "From: " . $nombre . " \r\n";
 		$mailHeader .= "X-Mailer: PHP/" . phpversion() . " \r\n";
@@ -36,12 +37,12 @@
 		
 		// Correo al Administrador
 		$mailContentAdmin  = mailContent($style,$myStyle,$header,$mensaje_admin,$footer);
-		mail($para, utf8_decode("Contacto desde sitio web"), utf8_decode($mailContentAdmin), $mailHeader);		
+		//mail($para, utf8_decode("Contacto desde sitio web"), utf8_decode($mailContentAdmin), $mailHeader);		
 		// Correo al Usuario
 		$mailContentUser = mailContent($style,$myStyle,$header,$mensaje_usuario,$footer);
-		mail($correo, utf8_decode("CPI seguridad"), utf8_decode($mailContentUser), $mailHeader2);	
+		//mail($correo, utf8_decode("CPI seguridad"), utf8_decode($mailContentUser), $mailHeader2);	
 		
-		//echo $mailContentAdmin.'<br/>'.$mailContentUser;	
+		echo $mailContentAdmin.'<br/>'.$mailContentUser;	
 		
 		header("Location: ".$rootPath."contacto/enviado");
 		exit;
@@ -260,7 +261,12 @@
                         $correo->required = true;
                         echo $correo->display();
                         
-                    
+                    	$mensaje = new input_textarea;
+						$mensaje->spry = "spryMensaje";
+						$mensaje->name = "mensaje";
+                        $mensaje->hint = "Mensaje";
+						$mensaje->label ="mensaje";
+                        echo $mensaje->display();
 						
                     ?>
                        

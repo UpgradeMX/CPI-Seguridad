@@ -20,7 +20,7 @@
 	.textfieldFocusState input, input.textfieldFocusState { color:#AAA; }
 	
 	/* HINT */
-	.textfieldHintState input, input.textfieldHintState { font-size:.8em !important; font-weight:200; color:#888 !important; }
+	.textfieldHintState input, input.textfieldHintState { font-size:.8em !important; font-weight:200; color:#000000 !important; }
 	
 /* [ ------ T E X A R E A ------] */
 

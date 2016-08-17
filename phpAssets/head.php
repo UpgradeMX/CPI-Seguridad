@@ -16,7 +16,12 @@
 <link rel="stylesheet" type="text/css" media="only screen and (min-width:1700px)"  href="<?php echo $rootpath; ?>_includes/_css/hd.css"/>
 <link rel="stylesheet" type="text/css" media="only screen and (min-width:10px) and (max-width:600px)"   href="<?php echo $rootpath; ?>_includes/_css/small.css"/>
 <link rel="stylesheet" type="text/css" media="only screen and (min-width:601px) and (max-width:900px)"  href="<?php echo $rootpath; ?>_includes/_css/medium.css"/>
-<link rel="stylesheet" type="text/css" media="only screen and (min-width:900px) and (max-width:1200px)" href="<?php echo $rootpath; ?>_includes/_css/std.css"/>
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:900px) and (max-width:1280px)" href="<?php echo $rootpath; ?>_includes/_css/std.css"/>
+
+<link rel="stylesheet" type="text/css" href="edit_online/_css/special.css"/>
+<script type="text/javascript" src="./edit_online/_js/special.js"></script>
+<script src="./edit_online/ckeditor/ckeditor.js"></script>
+
 <!-- SPRY -->
 <link rel="stylesheet" type="text/css" href="_includes/_css/SpryValidation.css"/>
 
