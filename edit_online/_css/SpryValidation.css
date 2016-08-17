@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* Tipo.- TEXTFIELD */
+ 
+	/* ESTATUS: OK */ 
+	.textfieldValidState input, input.textfieldValidState { color:#42923d; }
+	
+	
+	/*  Mensajes en estatus Pendiente*/ 
+	.textfieldRequiredMsg, .textfieldInvalidFormatMsg, .textfieldMinValueMsg, .textfieldMaxValueMsg, .textfieldMinCharsMsg, .textfieldMaxCharsMsg, .textfieldValidMsg { display: none; }
+	
+	/* 
+	 Requerido
+	 */
+	.textfieldRequiredState .textfieldRequiredMsg, .textfieldInvalidFormatState .textfieldInvalidFormatMsg,  .textfieldMinValueState .textfieldMinValueMsg, .textfieldMaxValueState .textfieldMaxValueMsg, .textfieldMinCharsState .textfieldMinCharsMsg, .textfieldMaxCharsState .textfieldMaxCharsMsg { display: block; color: #F32125; }
+	
+	/* Invalido */
+	input.textfieldRequiredState, .textfieldRequiredState input, input.textfieldInvalidFormatState, .textfieldInvalidFormatState input, input.textfieldMinValueState, .textfieldMinValueState input, input.textfieldMaxValueState, .textfieldMaxValueState input,  input.textfieldMinCharsState, .textfieldMinCharsState input, input.textfieldMaxCharsState, .textfieldMaxCharsState input { color: #F87073; border-bottom:#F32125 solid thin; }
+	
+	
+	/* En "Focus". */
+	.textfieldFocusState input, input.textfieldFocusState { color:#a2a2a2; }
+	
+	/* HINT */
+	.textfieldHintState input, input.textfieldHintState { font-size:.8em !important; font-weight:200; color:#a2a2a2 !important; }
+	
+/* Tipo.- Select */
+
+	/* ESTATUS: OK */ 
+	.selectValidState select, select.selectValidState { color: #42923d; }
+
+	/*  Mensajes en estatus Pendiente*/ 
+	.selectRequiredMsg, .selectInvalidMsg { display: none; }
+	
+	/* Requerido */
+	.selectRequiredState .selectRequiredMsg,
+	.selectInvalidState .selectInvalidMsg { display: block; color: #F32125; }
+	
+	/* Invalido */
+	select.selectRequiredState, .selectRequiredState select,
+	select.selectInvalidState, .selectInvalidState select { color: #F87073; border-bottom:#F32125 solid thin; }
+	
+	/* En "Focus". */
+	selectFocusState select, select.selectFocusState { color: #a2a2a2; }		
+	
+/* Tipo.- Textarea */
+
+
+.textareaRequiredMsg,
+.textareaMinCharsMsg,
+.textareaMaxCharsMsg,
+.textareaValidMsg {
+	display:none;
+}
+
+.textareaRequiredState .textareaRequiredMsg,
+.textareaMinCharsState .textareaMinCharsMsg,
+.textareaMaxCharsState .textareaMaxCharsMsg
+{
+	display: block;
+	color: #F32125;
+}
+ 
+.textareaValidState textarea, textarea.textareaValidState {
+	color: #42923d;
+}
+
+textarea.textareaRequiredState, .textareaRequiredState textarea, 
+textarea.textareaMinCharsState, .textareaMinCharsState textarea, 
+textarea.textareaMaxCharsState, .textareaMaxCharsState textarea {
+	
+	color: #F87073; border-bottom:#F32125 solid thin;
+	
+}
+
+.textareaFocusState textarea, textarea.textareaFocusState {
+	color:#a2a2a2;
+}
+
+.textareaFlashState textarea, textarea.textareaFlashState{
+	color:red !important;
+}
+
+textarea.textareaHintState, .textareaHintState textarea{
+	/* color: red !important;*/
+}
+	
+/* Tipo.- Checkbox*/	
+
+.checkboxRequiredMsg, .checkboxMinSelectionsMsg, .checkboxMaxSelectionsMsg{
+	display: none;
+}
+
+.checkboxRequiredState .checkboxRequiredMsg,
+.checkboxMinSelectionsState .checkboxMinSelectionsMsg,
+.checkboxMaxSelectionsState .checkboxMaxSelectionsMsg {
+	display: inline;
+	color: #F32125;
+}
+
+/* Tipo.- Radio */
+.radioRequiredMsg, .radioInvalidMsg{
+	display: none;
+}
+
+.radioRequiredState .radioRequiredMsg,
+.radioInvalidState .radioInvalidMsg{
+	display: inline;
+	color: #F32125;
+}

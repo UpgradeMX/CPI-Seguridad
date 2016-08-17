@@ -1,4 +1,16 @@
-<?php include ("Connections/connectMySql.php");?>
+<?php include_once("./edit_online/_session/_request.php"); include_once ("../../sudi_cpi_assets/connectMySql.php");?>
+<?php 
+$query_rsData = "SELECT * FROM data_tb;";
+$rsData = mysqli_query($connectMySql,$query_rsData);
+$row_rsData = mysqli_fetch_assoc($rsData);
+$totalRows_rsData = mysqli_num_rows($rsData);
+$arrayData = array();
+do{
+$arrayData[$row_rsData["data_id"]]=$row_rsData["data_text"];
+}while($row_rsData = mysqli_fetch_assoc($rsData));
+
+if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
+ }?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -35,15 +47,16 @@
     </script>
     </head>
     <body>
+    <div id="LoadContent"></div>
     <?php include_once("phpAssets/analytics.php"); ?>
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
 				<main id="index">
                 	<div id="welcome">
-                    <p>Contamos con la experiencia de <br>
-						<span class="jumbo">20 años</span> <br>
-						prestando nuestros servicios de seguridad para la industria, el <br>
-                        comercio, el turismo, la construcción y residencial</p>
+                    <p><span class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_1_&_table_:_data_tb"<?php }?>><?php echo $arrayData["1"];?></span><br>
+<span class="jumbo <?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_2_&_table_:_data_tb"<?php }?>><?php echo $arrayData["2"];?></span> <br>
+<span class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_3_&_table_:_data_tb"<?php }?>><?php echo $arrayData["3"];?></span></p>
+                   
                         <div class="arrows">
                         <div class="arrow arrow-1"></div>
 						<div class="arrow arrow-2"></div>
