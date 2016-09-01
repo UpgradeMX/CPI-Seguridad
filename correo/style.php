@@ -13,7 +13,7 @@
 					border-left: 1px solid #323232;
 					padding: 20px 23px 5px 30px; 
 				}
-				table.one { width: 100%; width: 100%; border: #9f8137 1px solid; border-radius: 10px;}
+				table.one { width: 100%; width: 100%; }
 				table.duo { width: 40%; }
 				table.tri { width: 30%; }
 				table.tri_2 { width: 60%; }

@@ -1,5 +1,5 @@
 <header>
-	<a href="<?php echo $rootpath; ?>inicio"><img id="logo" src="<?php echo $rootpath; ?>_images/logo.svg"/> </a>
+	<a href="<?php echo $rootpath; ?>inicio"><img id="logo" src="<?php echo $rootpath; ?>_images/logo2.svg"/> </a>
     <div class="menu-container">
       <div class="bars"><span></span><span></span><span></span>
         <div class="other-bar"></div>

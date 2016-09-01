@@ -203,17 +203,19 @@
                 	<div class="sucursal-info">
                     	<h2><span id="name">MATRIZ CHIHUAHUA</span></h2>
                         <hr>
-                         <p>Calle, colonia y número: <span id="street"></span> </p>
-                         <p>Teléfono de contacto:<span id="telephone"></span></p>
+                         <p>Calle Ortiz de Campos #2509, colonia parques de San Felipe<span id="street"></span> </p>
+                         <p>Teléfono de contacto: <a href="tel:6144218597">614-4-21-8597</a><span id="telephone"></span></p>
                          <br>
                          <p>C.P. : <span id="cp"></span></p> 
                          
                          
                     <div class="sucursal-img">
+                    
                     </div></div><div class="sucursal-map">
                     	<div id="location_map"><div id="google"></div></div>
                     
                     </div>
+                    <div style="clear:both;"></div>
                 </div>
                 
                 

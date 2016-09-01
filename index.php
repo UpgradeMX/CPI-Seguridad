@@ -70,7 +70,8 @@ if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
                         <h1 class="sect-title word-carousel" data-index="2">PROTECCIÓN</h1>
                         <h1 class="sect-title word-carousel" data-index="3">INTEGRIDAD</h1>
                     </div><div id="ciudades-index" class="col-50">
-                    	<h1 class="sect-title">nuestras ciudades</h1>
+                    	<h1 class="sect-title">ESTAMOS EN MÉXICO Y AMÉRICA LATINA</h1>
+                        
                         <a href="<?php echo $rootpath; ?>contacto">
                         <div class="lista-ciudades">
                        		<p>Chihuahua • Hermosillo• Tijuana • Cancún • Tulum • Mexicali • San José del Cabo • Torreón • Saltillo • Gómez Palacio • Durango • El Salto • Santiago Papasquiaro • Guadalupe Victoria • Rodeo • Cuencamé • Vicente Guerrero • Canatlán • Monterrey • San Pedro Garza García • Reynosa • Matamoros • Río Bravo • San Fernando • Nuevo Laredo • Polanco • Santa Fe • Xochimilco • Ecatepec • Pachuca • Tizayuca • Querétaro de Arteaga • Puebla • Puerto Plata (República Dominicana)</p>

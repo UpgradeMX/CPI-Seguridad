@@ -191,6 +191,7 @@ header{position:relative; display:block;}
 			background-image:url(../../_images/galeria/welcomestd.jpg);
 			background-size:cover;
 			background-repeat:no-repeat;
+			background-position:bottom;
 			height:880px;
 			position:relative;
 			}	
@@ -239,7 +240,8 @@ header{position:relative; display:block;}
 		.actual{opacity:1 !important;}	
 		
 		#ciudades-index{
-			background-image:url(../../_images/galeria/ciudades-index-bg.jpg);
+			background-color:#262011;
+			background-image:url(../../_images/galeria/mapa.svg);
 			height:500px;
 			background-position:center;	
 			position:relative; 
@@ -318,8 +320,9 @@ header{position:relative; display:block;}
 				position:absolute;
 				transform:translate(-50%,-50%);
 				left:50%;
-				top:60%;
-				color:#FFFFFF;}
+				top:35%;
+				color:#FFFFFF;
+				font-family: 'futura_urw_extra_boldregular';}
 		#last{
 				height:605px;}	
 			
@@ -359,7 +362,7 @@ header{position:relative; display:block;}
 					-o-transition:all .8s ease;
 					transition:all .8s ease;}	
 					
-		#contacto-index span a{color:#FFFFFF;}			
+		#contacto-index span a{color:#FFFFFF; margin:5px; letter-spacing:2px;}			
 				
 		#index-clientes{
 				position:relative;
@@ -728,7 +731,7 @@ header{position:relative; display:block;}
 			display:block;
 			margin:0 auto;}
 		#contacto1{
-			height:500px;
+			height:592px;
 			
 			}
 			
@@ -745,19 +748,23 @@ header{position:relative; display:block;}
    			 border: #000000 2px solid;
 			}	
 		.sucursal-img{
-			background-color:#e2e2e2;
-			height:50%;}	
+			background:url(../../_images/sucursal.jpg);
+			height:50%;
+			background-position:center;
+			background-size:cover;}	
 			
 		.sucursal-info h2{
-			text-align:center;}
+			text-align:center;
+			margin:10px;}
 			
 		.sucursal-info p{
 			margin:0px;
 			width:40%;
 			display:inline-block;
 			vertical-align:top;
-			padding: 30px;
+			padding: 20px;
     		box-sizing: border-box;}	
+			.sucursal-info p a{color:inherit;}
 		.dropdown {
 			  position: relative;
 			  display: block;

@@ -92,6 +92,10 @@ header{height: 80px;}
 
 .dropdown{margin-top:90px;}
 
+.sucursal-info, .sucursal-map{width:100%; display:block;}
+
+#contacto1{height:auto;}
+
 footer nav{width:100%; padding:10px;}
 
 footer a{margin:15px;}
