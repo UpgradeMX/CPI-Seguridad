@@ -1,5 +1,25 @@
+<?php  include_once("./edit_online/_session/_request.php"); include_once ("../../sudi_cpi_assets/connectMySql.php");?>
 <?php 
-	include ("Connections/connectMySql.php");
+	$query_rsData = "SELECT * FROM data_tb;";
+	$rsData = mysqli_query($connectMySql,$query_rsData);
+	$row_rsData = mysqli_fetch_assoc($rsData);
+	$totalRows_rsData = mysqli_num_rows($rsData);
+	$arrayData = array();
+	do{
+	$arrayData[$row_rsData["data_id"]]=$row_rsData["data_text"];
+	}while($row_rsData = mysqli_fetch_assoc($rsData));
+	
+	$query_rsImages = "SELECT * FROM images_tb;";
+	$rsImages = mysqli_query($connectMySql,$query_rsImages);
+	$row_rsImages = mysqli_fetch_assoc($rsImages);
+	$totalRows_rsImages = mysqli_num_rows($rsImages);
+	$arrayImage = array();
+	do{
+	$arrayImage[$row_rsImages["img_section"]]=$row_rsImages["img_file"];
+	}while($row_rsImages = mysqli_fetch_assoc($rsImages));
+	if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
+	 }
+
 	include_once("spryClass/class.SpryTextfield.inc"); 
 	include_once("spryClass/class.SpryTextarea.inc"); 
 	include_once("spryClass/class.SprySelect.inc");
@@ -64,13 +84,14 @@
 
     </head>
     <body>
+    <div id="LoadContent"></div>
     <?php include_once("phpAssets/analytics.php"); ?>
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
-             	<div id="img-reclutamiento" class="img-title"> <h1 class="page-title">RECLUTAMIENTO</h1> </div>
+             	<div id="img-reclutamiento" class="img-title" style="background-image:url('http://sudi-cpi.upgrade.red/<?php echo $arrayImage[7];?>');"> <h1 class="page-title">RECLUTAMIENTO</h1> </div>
 				<main id="reclutamiento">
                     <div id="descripcion-reclutamiento">
-                        <p>Los aspirantes a ingresar a nuestra familia son seleccionados cumpliendo con los estándares establecidos por las Autoridades de Seguridad Pública, además de examen médico, antidoping, físico, psicológico y socioeconómico.</p>
+                        <p class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_8_&_table_:_data_tb"<?php }?>><?php echo $arrayData["8"];?></p>
                     </div>
                 <div id="formulario-reclutamiento">
                 <img class="bw" src="_images/galeria/reclutamiento-form.jpg" alt="">
@@ -130,7 +151,7 @@
                         <input type="hidden" name="MMinsert" value="runContacto"/       
                     </div>
                 </div>
-              	<div id="contacto-reclutamiento">
+              	<div id="contacto-reclutamiento" style="background-image:url('http://sudi-cpi.upgrade.red/<?php echo $arrayImage[8];?>');">
                 <h1>CONTACTO</h1>
                 <span>teléfono 01 800 00 (34337)</span>
                 <a target="_blank" href="https://www.facebook.com/CPISEGURIDADPRIVADA/"><i class="icon icon-sudi-facebook"></i></a>
