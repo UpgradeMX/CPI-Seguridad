@@ -18,8 +18,18 @@ do{
 $arrayImage[$row_rsImages["img_section"]]=$row_rsImages["img_file"];
 }while($row_rsImages = mysqli_fetch_assoc($rsImages));
 
-if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
- }?>
+$query_rsUbicacion = "SELECT * FROM mapa_tb WHERE hidefield=0;";
+$rsUbicacion = mysqli_query($connectMySql,$query_rsUbicacion);
+$row_rsUbicacion = mysqli_fetch_assoc($rsUbicacion);
+$totalRows_rsUbicacion = mysqli_num_rows($rsUbicacion);
+$ubicaciones = "";
+do{
+	$ubicaciones .= $row_rsUbicacion["map_name"]." • ";
+}while($row_rsUbicacion = mysqli_fetch_assoc($rsUbicacion));
+
+$ubicaciones = trim($ubicaciones," • ");
+
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -83,7 +93,7 @@ if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
                     	<h1 class="sect-title">nuestras ciudades</h1>
                         <a href="<?php echo $rootpath; ?>contacto">
                         <div class="lista-ciudades">
-                       		<p>Chihuahua • Hermosillo• Tijuana • Cancún • Tulum • Mexicali • San José del Cabo • Torreón • Saltillo • Gómez Palacio • Durango • El Salto • Santiago Papasquiaro • Guadalupe Victoria • Rodeo • Cuencamé • Vicente Guerrero • Canatlán • Monterrey • San Pedro Garza García • Reynosa • Matamoros • Río Bravo • San Fernando • Nuevo Laredo • Polanco • Santa Fe • Xochimilco • Ecatepec • Pachuca • Tizayuca • Querétaro de Arteaga • Puebla • Puerto Plata (República Dominicana)</p>
+                       		<p><?php print $ubicaciones;?><!--Chihuahua • Hermosillo• Tijuana • Cancún • Tulum • Mexicali • San José del Cabo • Torreón • Saltillo • Gómez Palacio • Durango • El Salto • Santiago Papasquiaro • Guadalupe Victoria • Rodeo • Cuencamé • Vicente Guerrero • Canatlán • Monterrey • San Pedro Garza García • Reynosa • Matamoros • Río Bravo • San Fernando • Nuevo Laredo • Polanco • Santa Fe • Xochimilco • Ecatepec • Pachuca • Tizayuca • Querétaro de Arteaga • Puebla • Puerto Plata (República Dominicana)--></p>
                         </div>
                         </a>
                     </div>
