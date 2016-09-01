@@ -10,6 +10,17 @@
 	do{
 	$arrayImage[$row_rsImages["img_section"]]=$row_rsImages["img_file"];
 	}while($row_rsImages = mysqli_fetch_assoc($rsImages));
+	
+	$query_rsUbicacion = "SELECT * FROM mapa_tb WHERE hidefield=0;";
+	$rsUbicacion = mysqli_query($connectMySql,$query_rsUbicacion);
+	$row_rsUbicacion = mysqli_fetch_assoc($rsUbicacion);
+	$totalRows_rsUbicacion = mysqli_num_rows($rsUbicacion);
+	$ubicaciones = "";
+	do{
+		$ubicaciones .= '{latLng:['.$row_rsUbicacion["map_lat"].', '.$row_rsUbicacion["map_long"].'],  options:{ icon: ulrMarker, title:"'.$row_rsUbicacion["map_name"].'"}, data:"'.$row_rsUbicacion["map_name"].'"},';
+	}while($row_rsUbicacion = mysqli_fetch_assoc($rsUbicacion));
+	$ubicaciones = trim($ubicaciones,",");
+	
 	if ((isset($_POST["MMinsert"])) && ($_POST["MMinsert"] == "runContacto")) {
 	
 		$nombre = $_POST['name'];
@@ -72,65 +83,6 @@
         <script type="text/javascript">
         	$(document).ready(function() {	
 			
-			var address =[];
-			address[1] = ["Matriz Chihuahua","calle Falsa 123","663064633","31000"];
-			address[2] = ["Matriz Mexico","Fake st 456","1234567","21310"];
-			
-			//	$('.dropdown-content a').click(function(e){
-//					e.preventDefault();
-//					var position_map_lat = $(this).data('lat');
-//					var position_map_long = $(this).data('long');
-//					var position_map_zoom = $(this).data('zoom');
-//					
-//					var info = $(this).data('info');
-//					
-//					var name = address[info][0];
-//					var street = address[info][1];
-//					var telephone = address[info][2];
-//					var cp = address[info][3];
-//					 
-//					document.getElementById("name").innerHTML=name;
-//					document.getElementById("street").innerHTML=street;
-//					document.getElementById("cp").innerHTML=cp;
-//					document.getElementById("telephone").innerHTML=telephone;
-//				
-//			
-//					// Mapa de google
-//					//var ulrMarker = '_images/general/market.png';
-//					var ulrMarker = 'https://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png';
-//		
-//					jQuery("#google").gmap3({
-//						marker:{
-//							values:[
-//								//{latLng:[position_map_lat, position_map_long],  options:{ icon: ulrMarker, title:"CPI"}, data:"CPI"}
-//								{latLng:["28.645421", "-106.091889"],  options:{ icon: ulrMarker, title:"CPI"}, data:"CPI"}
-//							]
-//						},
-//						map:{
-//							options:{
-//								mapTypeControl: false,
-//								zoom: 6, // zoom del mapa
-//								center:["28.645421", "-106.091889"],
-//								mapTypeId: "cpi_map",
-//								navigationControl: false,
-//								scrollwheel: false,
-//								streetViewControl: true
-//							}
-//						},
-//						styledmaptype:{
-//							id: "cpi_map",
-//							options:{
-//								name: "cpi_map"
-//							},
-//							styles: [
-//								{
-//									elementType: "all",
-//								}
-//							]
-//						}
-//					});
-//				});
-//				
 				// Mapa de google
 				//var ulrMarker = '_images/general/market.png';
 				var ulrMarker = 'https://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png';
@@ -138,7 +90,8 @@
 				jQuery("#google").gmap3({
 					marker:{
 						values:[
-							{latLng:[29.565038, -105.852349],  options:{ icon: ulrMarker, title:"Chihuahua"}, data:"Chihuahua"},
+						<?php print $ubicaciones;?>
+							/*{latLng:[29.565038, -105.852349],  options:{ icon: ulrMarker, title:"Chihuahua"}, data:"Chihuahua"},
 							{latLng:[29.074881, -110.958784],  options:{ icon: ulrMarker, title:"Hermosillo"}, data:"Hermosillo"},
 							{latLng:[32.514112, -117.035010],  options:{ icon: ulrMarker, title:"Tijuana"}, data:"Tijuana"},
 							{latLng:[21.163379, -86.855622],  options:{ icon: ulrMarker, title:"Cancún"}, data:"Cancún"},
@@ -170,7 +123,7 @@
 							{latLng:[19.840624, -98.981729],  options:{ icon: ulrMarker, title:"Tizayuca"}, data:"Tizayuca"},
 							{latLng:[20.579698, -100.060493],  options:{ icon: ulrMarker, title:"Queretaro de Arteaga"}, data:"Queretaro de Arteaga"},
 							{latLng:[18.505233, -98.304647],  options:{ icon: ulrMarker, title:"Puebla"}, data:"Puebla"},
-							{latLng:[19.780370, -70.689174],  options:{ icon: ulrMarker, title:"Puerto Plata(Republica Dominicana)"}, data:"Puerto plata(Republica Dominicana)"},
+							{latLng:[19.780370, -70.689174],  options:{ icon: ulrMarker, title:"Puerto Plata(Republica Dominicana)"}, data:"Puerto plata(Republica Dominicana)"},*/
 						]
 					},
 					map:{
