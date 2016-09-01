@@ -9,6 +9,15 @@ do{
 $arrayData[$row_rsData["data_id"]]=$row_rsData["data_text"];
 }while($row_rsData = mysqli_fetch_assoc($rsData));
 
+$query_rsImages = "SELECT * FROM images_tb;";
+$rsImages = mysqli_query($connectMySql,$query_rsImages);
+$row_rsImages = mysqli_fetch_assoc($rsImages);
+$totalRows_rsImages = mysqli_num_rows($rsImages);
+$arrayImage = array();
+do{
+$arrayImage[$row_rsImages["img_section"]]=$row_rsImages["img_file"];
+}while($row_rsImages = mysqli_fetch_assoc($rsImages));
+
 if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
  }?>
 <!DOCTYPE HTML>
@@ -52,7 +61,7 @@ if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
 				<main id="index">
-                	<div id="welcome">
+                	<div id="welcome" style="background-image:url('http://sudi-cpi.upgrade.red/<?php echo $arrayImage[1];?>');">
                     <p><span style="font-size: 1.5em;" class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_1_&_table_:_data_tb"<?php }?>><?php echo $arrayData["1"];?></span><br>
 <span class="jumbo <?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_2_&_table_:_data_tb"<?php }?>><?php echo $arrayData["2"];?></span> <br>
 <span class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_3_&_table_:_data_tb"<?php }?> style="font-size: 1.5em;"Kovaciw40
@@ -80,12 +89,12 @@ if($edit){//echo "exito:".date('m/d/Y H:i:s', $_SESSION['Timeout']);
                     </div>
                     </div>
                     
-                    <div id="third" class="index-section">
+                    <div id="third" class="index-section"  style="background-image:url('http://sudi-cpi.upgrade.red/<?php echo $arrayImage[2];?>');">
                     <h1 class="<?php echo $class; ?>" <?php if($edit){?>data-load="contload" data-datos="id_:_4_&_table_:_data_tb"<?php }?>><?php echo $arrayData["4"];?></h1>
                     </div>
                     
                     <div id="last" class="index-section">
-                    <div id="contacto-index" class="col-50">
+                    <div id="contacto-index" class="col-50" style="background-image:url('http://sudi-cpi.upgrade.red/<?php echo $arrayImage[3];?>');">
                     <!--<img src="_images/galeria/contacto-index-bg.jpg" alt="">-->
                     <span>Contacto <a href="tel:018000034337">01 800 00 (34337)</a></span>
                     </div><div id="index-clientes" class="col-50">
