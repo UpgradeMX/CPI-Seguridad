@@ -601,7 +601,7 @@ header{position:relative; display:block;}
 		width: 35%;
 		text-align: justify;
 		margin: 0 auto;
-		padding:60px 0;
+		padding:60px 0 !important;
 		height:100px;
 			}	
 	#formulario-reclutamiento{

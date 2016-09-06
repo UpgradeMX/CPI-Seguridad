@@ -16,7 +16,7 @@ $(document).ready(function() {
         var color = $(this).css("color");
 		$(this).css({
 			"cursor" : "pointer",
-			"background-image" : "url('./edit_online/_img/edit-white.svg')",
+			"background-image" : "url('./edit_online/_img/edit-black.svg')",
 			"background-repeat" : "no-repeat",
 			"background-size" : "20px",
 			"background-position" : "right",
