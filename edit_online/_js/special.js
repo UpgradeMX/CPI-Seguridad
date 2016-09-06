@@ -44,11 +44,7 @@
 //
 //});
 
-$(document).on("click",".close",function(e) {
-		"use strict";
-        $("#LoadContent").html("");
-		$("#LoadContent").css("display","none");
-});
+
 
 function loadContent(cargar,datos=false){
 	var contload = "./edit_online/_assets/"+cargar+".php";
@@ -76,6 +72,8 @@ $(".close").mouseover(function() {
 	console.log("hola");
     $(this).attr("src","./edit_online/_img/cross-out-hover.svg");
 });
+
+
 
 /* ========== [GOOGLE MAPS] ========== */
 

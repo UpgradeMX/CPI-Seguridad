@@ -1,8 +1,15 @@
 <?php 
-	include ("Connections/connectMySql.php");
+	include_once ("../../sudi_cpi_assets/connectMySql.php");
 	include_once("spryClass/class.SpryTextfield.inc"); 
 	include_once("spryClass/class.SpryTextarea.inc"); 
-	
+	$query_rsImages = "SELECT * FROM images_tb;";
+	$rsImages = mysqli_query($connectMySql,$query_rsImages);
+	$row_rsImages = mysqli_fetch_assoc($rsImages);
+	$totalRows_rsImages = mysqli_num_rows($rsImages);
+	$arrayImage = array();
+	do{
+	$arrayImage[$row_rsImages["img_section"]]=$row_rsImages["img_file"];
+	}while($row_rsImages = mysqli_fetch_assoc($rsImages));
 	if ((isset($_POST["MMinsert"])) && ($_POST["MMinsert"] == "runContacto")) {
 	
 		$nombre = $_POST['name'];
@@ -197,7 +204,7 @@
     <?php include_once("phpAssets/analytics.php"); ?>
         <div id="big-container"> 
         	 <?php include_once("phpAssets/header.php"); ?>
-             	<div id="img-reclutamiento" class="img-title"> <h1 class="page-title">CONTACTO</h1> </div>
+             	<div id="img-reclutamiento" class="img-title" style="background-image:url('http://sudi-cpi.upgrade.red/<?php echo $arrayImage[9];?>');"> <h1 class="page-title">CONTACTO</h1> </div>
 				<main id="contacto">
                 <div id="contacto1">
                 	<div class="sucursal-info">
